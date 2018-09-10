@@ -15,23 +15,23 @@
 
 
 
-<meta name="description" content="element-ui 使用初体验前言手上有些项目用的element-ui，刚好有空琢磨一下怎么减小打包文件大小和打包速度方面，为了演示实验，用 vue-cli 生成初始项目，在这仅对 element-ui 主题和组件方面来优化。 1vue init webpack vuecli 完整引入完整地将 ui 和样式引入。 12import ElementUI from &apos;element-ui&apos;impor">
+<meta name="description" content="element-ui 使用初体验前言手上有些项目用的element-ui，刚好有空琢磨一下怎么减小打包文件大小和打包速度方面，为了演示实验，用 vue-cli 生成初始项目，在这仅对 element-ui 主题和组件方面来优化。">
 <meta name="keywords" content="vue,element-ui">
 <meta property="og:type" content="article">
 <meta property="og:title" content="element-ui更换主题和按需引入组件">
 <meta property="og:url" content="https://leekiwi.github.io/2018/09/04/element-ui更换主题和按需引入组件/index.html">
 <meta property="og:site_name" content="little ice&#39;s Blog">
-<meta property="og:description" content="element-ui 使用初体验前言手上有些项目用的element-ui，刚好有空琢磨一下怎么减小打包文件大小和打包速度方面，为了演示实验，用 vue-cli 生成初始项目，在这仅对 element-ui 主题和组件方面来优化。 1vue init webpack vuecli 完整引入完整地将 ui 和样式引入。 12import ElementUI from &apos;element-ui&apos;impor">
+<meta property="og:description" content="element-ui 使用初体验前言手上有些项目用的element-ui，刚好有空琢磨一下怎么减小打包文件大小和打包速度方面，为了演示实验，用 vue-cli 生成初始项目，在这仅对 element-ui 主题和组件方面来优化。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://leekiwi.github.io/gb/element-ui更换主题和按需引入组件/0.bmp">
 <meta property="og:image" content="https://leekiwi.github.io/gb/element-ui更换主题和按需引入组件/1.bmp">
 <meta property="og:image" content="https://leekiwi.github.io/gb/element-ui更换主题和按需引入组件/2.bmp">
 <meta property="og:image" content="https://leekiwi.github.io/gb/element-ui更换主题和按需引入组件/3.bmp">
 <meta property="og:image" content="https://leekiwi.github.io/gb/element-ui更换主题和按需引入组件/4.bmp">
-<meta property="og:updated_time" content="2018-09-10T10:12:21.112Z">
+<meta property="og:updated_time" content="2018-09-10T10:17:13.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="element-ui更换主题和按需引入组件">
-<meta name="twitter:description" content="element-ui 使用初体验前言手上有些项目用的element-ui，刚好有空琢磨一下怎么减小打包文件大小和打包速度方面，为了演示实验，用 vue-cli 生成初始项目，在这仅对 element-ui 主题和组件方面来优化。 1vue init webpack vuecli 完整引入完整地将 ui 和样式引入。 12import ElementUI from &apos;element-ui&apos;impor">
+<meta name="twitter:description" content="element-ui 使用初体验前言手上有些项目用的element-ui，刚好有空琢磨一下怎么减小打包文件大小和打包速度方面，为了演示实验，用 vue-cli 生成初始项目，在这仅对 element-ui 主题和组件方面来优化。">
 <meta name="twitter:image" content="https://leekiwi.github.io/gb/element-ui更换主题和按需引入组件/0.bmp">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -324,6 +324,7 @@
                       
                                     
                                           <h2 id="element-ui-使用初体验"><a href="#element-ui-使用初体验" class="headerlink" title="element-ui 使用初体验"></a>element-ui 使用初体验</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>手上有些项目用的<code>element-ui</code>，刚好有空琢磨一下怎么减小打包文件大小和打包速度方面，为了演示实验，用 vue-cli 生成初始项目，在这仅对 element-ui 主题和组件方面来优化。</p>
+<a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack vuecli</span><br></pre></td></tr></table></figure>
 <h3 id="完整引入"><a href="#完整引入" class="headerlink" title="完整引入"></a>完整引入</h3><p>完整地将 ui 和样式引入。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span></span><br></pre></td></tr></table></figure>
@@ -374,7 +375,7 @@
         <p><span>本文标题:</span><a href="/2018/09/04/element-ui更换主题和按需引入组件/">element-ui更换主题和按需引入组件</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Little ice</a></p>
         <p><span>发布时间:</span>2018-09-04, 19:40:30</p>
-        <p><span>最后更新:</span>2018-09-10, 18:12:21</p>
+        <p><span>最后更新:</span>2018-09-10, 18:17:13</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/04/element-ui更换主题和按需引入组件/" title="element-ui更换主题和按需引入组件">https://leekiwi.github.io/2018/09/04/element-ui更换主题和按需引入组件/</a>
             <span class="copy-path" data-clipboard-text="原文: https://leekiwi.github.io/2018/09/04/element-ui更换主题和按需引入组件/　　作者: Little ice" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

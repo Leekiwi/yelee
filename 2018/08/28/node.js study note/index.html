@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="Nodejs 学习笔记node 内部对模块输出 module.exports 的实现 变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数 12345678910111213141516171819202122// 准备module对象var module = &amp;#123;    id: &amp;apos;hello&amp;apos;,    exports: &amp;#123;">
+<meta name="description" content="Nodejs 学习笔记node 内部对模块输出 module.exports 的实现 变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数">
 <meta name="keywords" content="nodejs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nodejs学习笔记">
 <meta property="og:url" content="https://leekiwi.github.io/2018/08/28/node.js study note/index.html">
 <meta property="og:site_name" content="little ice&#39;s Blog">
-<meta property="og:description" content="Nodejs 学习笔记node 内部对模块输出 module.exports 的实现 变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数 12345678910111213141516171819202122// 准备module对象var module = &amp;#123;    id: &amp;apos;hello&amp;apos;,    exports: &amp;#123;">
+<meta property="og:description" content="Nodejs 学习笔记node 内部对模块输出 module.exports 的实现 变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-10T10:10:21.760Z">
+<meta property="og:updated_time" content="2018-09-10T10:16:47.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs学习笔记">
-<meta name="twitter:description" content="Nodejs 学习笔记node 内部对模块输出 module.exports 的实现 变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数 12345678910111213141516171819202122// 准备module对象var module = &amp;#123;    id: &amp;apos;hello&amp;apos;,    exports: &amp;#123;">
+<meta name="twitter:description" content="Nodejs 学习笔记node 内部对模块输出 module.exports 的实现 变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -319,6 +319,7 @@
                                     
                                           <h2 id="Nodejs-学习笔记"><a href="#Nodejs-学习笔记" class="headerlink" title="Nodejs 学习笔记"></a>Nodejs 学习笔记</h2><p><strong>node 内部对模块输出 module.exports 的实现</strong></p>
 <p>变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数</p>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// 准备module对象</span><br><span class="line">var module = &#123;</span><br><span class="line">    id: &apos;hello&apos;,</span><br><span class="line">    exports: &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var load = function(module) &#123;</span><br><span class="line">    // 读取的hello.js代码</span><br><span class="line">    function greet(name) &#123;</span><br><span class="line">        console.log(&apos;Hello, &apos; + name + &apos;!&apos;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    module.exports = greet;</span><br><span class="line"></span><br><span class="line">    // hello.js代码结束</span><br><span class="line">    return module.exports;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var exported = load(module);</span><br><span class="line"></span><br><span class="line">// 保存module</span><br><span class="line">save(module, exported);</span><br></pre></td></tr></table></figure>
 <p>默认情况下，Node 准备的 exports 变量和 module.exports 变量实际上是同一个变量，所以一下两种写法都支持</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// method 1</span><br><span class="line">module.exports = &#123;</span><br><span class="line">    foo: foo,</span><br><span class="line">    bar: bar</span><br><span class="line">&#125;;</span><br><span class="line">or</span><br><span class="line">module.exports.foo = foo;</span><br><span class="line">module.exports.bar = bar;</span><br><span class="line"></span><br><span class="line">// method 2</span><br><span class="line">exports.foo = foo;</span><br><span class="line">exports.bar = bar;</span><br></pre></td></tr></table></figure>
@@ -366,7 +367,7 @@
         <p><span>本文标题:</span><a href="/2018/08/28/node.js study note/">nodejs学习笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Little ice</a></p>
         <p><span>发布时间:</span>2018-08-28, 20:42:30</p>
-        <p><span>最后更新:</span>2018-09-10, 18:10:21</p>
+        <p><span>最后更新:</span>2018-09-10, 18:16:47</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/08/28/node.js study note/" title="nodejs学习笔记">https://leekiwi.github.io/2018/08/28/node.js study note/</a>
             <span class="copy-path" data-clipboard-text="原文: https://leekiwi.github.io/2018/08/28/node.js study note/　　作者: Little ice" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
