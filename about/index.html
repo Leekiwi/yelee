@@ -284,34 +284,34 @@
 
 
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+      <div class="article-inner">
         
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
   
     <h1 class="article-title" itemprop="name">
       关于我 &amp; 留言板
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+              </header>
+              
+                <div class="article-info article-info-post">
+                  
 
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <style>
+                    
+                      <div class="clearfix"></div>
+                </div>
+                
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                                    
+                                      <style>
     .article-meta { display: none; }
     #container .article .article-title { padding-right: 0; }
     .article-header {
@@ -329,8 +329,8 @@
 </style>
 
 
-          
-        <style type="text/css">
+                                        
+                                          <style type="text/css">
     strong a {
         color: #747474;
     }
@@ -409,23 +409,23 @@
 
 <ul class="ds-recent-visitors" data-num-items="30" data-avatar-size="56"></ul>
 
+                                            
+                    </div>
+                    
+      </div>
       
-    </div>
-    
-  </div>
-  
-    
+        
 
 
-  
+          
 </article>
 
 
+  
 
-
-
-    
-        <section id="comments">
+        
+          
+                    <section id="comments">
     <style> aside.comment-bar { margin: auto 30px; }</style>
     <div id="disqus_thread"></div>
     <script>
@@ -446,18 +446,31 @@
 </section>
 
 
-    
+                      
+                            
+                              
+                                <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+                                  <!-- valine评论系统 -->
+<div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
 
-
-
-
-
-    <script>
-        
-            yiliaConfig.fancybox = false;
-        
-    </script>
-</div>
+  new Valine({
+    el: '#vcomment',
+    notify: notify,
+    verify: verify,
+    app_id: "zcr8rqutUNSQrW9ATG6Dpwuy-gzGzoHsz",
+    app_key: "TjhvhkEcspUJ36V4N7BdyLbc",
+    placeholder: "Just go go",
+    avatar: "wavatar"
+  });
+</script>
+                                </section>
+                                
+                                  </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">

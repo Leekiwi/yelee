@@ -287,42 +287,42 @@
 
 
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+      <div class="article-inner">
         
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
   
     <h1 class="article-title" itemprop="name">
       干掉状态从session到token
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+              </header>
+              
+                <div class="article-info article-info-post">
+                  
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/状态保持/">状态保持</a>
     </div>
 
 
-        
+                    
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li></ul>
     </div>
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="美好的旧时光"><a href="#美好的旧时光" class="headerlink" title="美好的旧时光"></a>美好的旧时光</h2><p>我经常怀念三十年前那美好的旧时光， 工作很轻松， 生活很悠闲。</p>
+                      <div class="clearfix"></div>
+                </div>
+                
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                                    
+                                          <h2 id="美好的旧时光"><a href="#美好的旧时光" class="headerlink" title="美好的旧时光"></a>美好的旧时光</h2><p>我经常怀念三十年前那美好的旧时光， 工作很轻松， 生活很悠闲。</p>
 <p>上班的时候偶尔有些 HTTP 的请求发到我这里， 我简单的看一下， 取出相对应的 html 文档，图片，发回去就可以了， 然后就可以继续喝茶聊天。</p>
 <a id="more"></a>
 <p>我的创造者们对我很好， 他们制定的一个简单 HTTP 协议， 就是请求加响应， 尤其是我不用记住是谁刚刚发了 HTTP 请求， 每个请求对我来说都是全新的！</p>
@@ -376,12 +376,12 @@
 <p>解除了 session id 这个负担， 可以说是无事一身轻， 我的机器集群现在可以轻松地做水平扩展， 用户访问量增大， 直接加机器就行。 这种无状态的感觉实在是太好了！</p>
 <p>（完）</p>
 
+                                            
+                    </div>
+                    
+      </div>
       
-    </div>
-    
-  </div>
-  
-    
+        
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2018/09/07/干掉状态从session到token/">干掉状态从session到token</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Little ice</a></p>
@@ -416,7 +416,7 @@
         
     </nav>
 
-  
+          
 </article>
 
     <div id="toc" class="toc-article">
@@ -443,11 +443,11 @@
     </script>
 
 
+  
 
-
-
-    
-        <section id="comments">
+        
+          
+                    <section id="comments">
     <style> aside.comment-bar { margin: auto 30px; }</style>
     <div id="disqus_thread"></div>
     <script>
@@ -468,10 +468,8 @@
 </section>
 
 
-    
-
-
-
+                      
+                            
 
     <div class="scroll" id="post-nav-button">
         
@@ -492,12 +490,29 @@
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/10/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/干掉状态从session到token/">干掉状态从session到token</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/03/前端必备vscode插件/">前端必备vscode插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/27/对MVC、MVP和MVVM的简单认识/">对MVC、MVP和MVVM的简单认识</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/22/正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/理解同步、异步和事件循环/">理解同步、异步和事件循环</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/22/搞定css三列布局/">搞定css三列布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/06/css中的一些坑/">css中的一些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/02/vue-cli中遇到的坑/">vue-cli中遇到的坑</a></li></ul>
 
 
+                              
+                                <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+                                  <!-- valine评论系统 -->
+<div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
 
-
-    <script>
-        
-    </script>
-</div>
+  new Valine({
+    el: '#vcomment',
+    notify: notify,
+    verify: verify,
+    app_id: "zcr8rqutUNSQrW9ATG6Dpwuy-gzGzoHsz",
+    app_key: "TjhvhkEcspUJ36V4N7BdyLbc",
+    placeholder: "Just go go",
+    avatar: "wavatar"
+  });
+</script>
+                                </section>
+                                
+                                  </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
