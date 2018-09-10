@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Little ice" />
+
+
+
+<meta name="description" content="项目构建自动化，错误查起来越来越不知所措，坑很多，踩过后要记录，防止踩第二遍 vue 单文件@import css 文件，不加~会报错">
+<meta name="keywords" content="vue-cli">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-cli中遇到的坑">
+<meta property="og:url" content="https://leekiwi.github.io/2017/09/02/vue-cli中遇到的坑/index.html">
+<meta property="og:site_name" content="little ice&#39;s Blog">
+<meta property="og:description" content="项目构建自动化，错误查起来越来越不知所措，坑很多，踩过后要记录，防止踩第二遍 vue 单文件@import css 文件，不加~会报错">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/bb7792e904a30442f11cb6c88c33cce8/xmlnote/E40E6B0ED1F5479F909A69469C83D99A/12039">
+<meta property="og:updated_time" content="2018-09-08T17:01:52.501Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue-cli中遇到的坑">
+<meta name="twitter:description" content="项目构建自动化，错误查起来越来越不知所措，坑很多，踩过后要记录，防止踩第二遍 vue 单文件@import css 文件，不加~会报错">
+<meta name="twitter:image" content="https://note.youdao.com/yws/public/resource/bb7792e904a30442f11cb6c88c33cce8/xmlnote/E40E6B0ED1F5479F909A69469C83D99A/12039">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="little ice&#39;s Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>vue-cli中遇到的坑 | little ice&#39;s Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/02.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Little ice</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">选择比努力更重要</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:libingsvip@163.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="https://weibo.com/2273031832" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/Leekiwi" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript-正则/">javascript 正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue-cli/">vue-cli</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件-开发/">插件 开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Little ice</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/02.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Little ice</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">选择比努力更重要</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:libingsvip@163.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="https://weibo.com/2273031832" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Leekiwi" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-vue-cli中遇到的坑" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/09/02/vue-cli中遇到的坑/" class="article-date">
+      <time datetime="2017-09-02T01:00:30.000Z" itemprop="datePublished">2017-09-02</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue-cli中遇到的坑
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/vue/">vue</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-cli/">vue-cli</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>项目构建自动化，错误查起来越来越不知所措，坑很多，踩过后要记录，防止踩第二遍</p>
+<h4 id="vue-单文件-import-css-文件，不加-会报错"><a href="#vue-单文件-import-css-文件，不加-会报错" class="headerlink" title="vue 单文件@import css 文件，不加~会报错"></a>vue 单文件@import css 文件，不加<code>~</code>会报错</h4><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;stylus&quot; scoped&gt;</span><br><span class="line">@import &apos;assets/css/variable&apos;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[HMR] bundle has 1 errors</span><br><span class="line">172:176 ./~/css-loader?&#123;&quot;minimize&quot;:false,&quot;sourceMap&quot;:false&#125;!./~/vue-loader/lib/style-compiler?&#123;&quot;vue&quot;:true,&quot;id&quot;:&quot;data-v-be4708e4&quot;,&quot;scoped&quot;:true,&quot;hasInlineConfig&quot;:false&#125;!./~/stylus-loader?&#123;&quot;sourceMap&quot;:false&#125;!./~/vue-loader/lib/selector.js?type=styles&amp;index=0!./src/components/views/programs/Programs.vue</span><br><span class="line">Module build failed: Error: D:\appSoft\wampserver\wamp64\www\iHomed_vue\src\components\views\programs\Programs.vue:200:9</span><br><span class="line">   196| &#125;</span><br><span class="line">   197| &lt;/script&gt;</span><br><span class="line">   198|</span><br><span class="line">   199| &lt;style lang=&quot;stylus&quot; scoped&gt;</span><br><span class="line">   200| @import &apos;assets/css/variable&apos;</span><br><span class="line">----------------^</span><br><span class="line">   201|</span><br></pre></td></tr></table></figure>
+<p>正确写法<code>@import &#39;~assets/css/variable&#39;</code></p>
+<h4 id="vue-cli-中-config-index-js-配置说明"><a href="#vue-cli-中-config-index-js-配置说明" class="headerlink" title="vue-cli 中 config/index.js 配置说明"></a>vue-cli 中 config/index.js 配置说明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  build: &#123;</span><br><span class="line">    env: require(&apos;./prod.env&apos;), // 使用 config/prod.env.js 中定义的编译环境</span><br><span class="line">    index: path.resolve(__dirname, &apos;../dist/index.html&apos;), // 编译输入的 index.html 文件</span><br><span class="line">    assetsRoot: path.resolve(__dirname, &apos;../dist&apos;), // 编译输出的静态资源路径</span><br><span class="line">    assetsSubDirectory: &apos;static&apos;, // 编译输出的二级目录</span><br><span class="line">    assetsPublicPath: &apos;/&apos;, // 编译发布的根目录，可配置为资源服务器域名或 CDN 域名</span><br><span class="line">    productionSourceMap: true, // 是否开启 cssSourceMap</span><br><span class="line">    // Gzip off by default as many popular static hosts such as</span><br><span class="line">    // Surge or Netlify already gzip all static assets for you.</span><br><span class="line">    // Before setting to `true`, make sure to:</span><br><span class="line">    // npm install --save-dev compression-webpack-plugin</span><br><span class="line">    productionGzip: false, // 是否开启 gzip</span><br><span class="line">    productionGzipExtensions: [&apos;js&apos;, &apos;css&apos;], // 需要使用 gzip 压缩的文件扩展名</span><br><span class="line">    // Run the build command with an extra argument to</span><br><span class="line">    // View the bundle analyzer report after build finishes:</span><br><span class="line">    // `npm run build --report`</span><br><span class="line">    // Set to `true` or `false` to always turn it on or off</span><br><span class="line">    bundleAnalyzerReport: process.env.npm_config_report</span><br><span class="line">  &#125;,</span><br><span class="line">  dev: &#123; // dev 环境</span><br><span class="line">    env: require(&apos;./dev.env&apos;), // 使用 config/dev.env.js 中定义的编译环境</span><br><span class="line">    port: 8084, // 运行测试页面的端口</span><br><span class="line">    autoOpenBrowser: true, // 自动在浏览器中打开</span><br><span class="line">    assetsSubDirectory: &apos;static&apos;, // 编译输出的二级目录</span><br><span class="line">    assetsPublicPath: &apos;/&apos;, // 编译发布的根目录，可配置为资源服务器域名或 CDN 域名</span><br><span class="line">    proxyTable: &#123;&#125;, // 需要 proxyTable 代理的接口（可跨域）</span><br><span class="line">    // CSS Sourcemaps off by default because relative paths are &quot;buggy&quot;</span><br><span class="line">    // with this option, according to the CSS-Loader README</span><br><span class="line">    // (https://github.com/webpack/css-loader#sourcemaps)</span><br><span class="line">    // In our experience, they generally work as expected,</span><br><span class="line">    // just be aware of this issue when enabling this option.</span><br><span class="line">    cssSourceMap: false  // 是否开启 cssSourceMap</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>曾经不易理解的两点<code>assetsSubDirectory</code>和<code>assetsPublicPath</code></p>
+<ol>
+<li><p>assetsSubDirectory<br>被 webpack 编译处理过的资源文件都会在这个 build.assetsRoot 目录下，如果 assetsRoot 值是<code>&quot;/web/app&quot;</code>，assetsSubDirectory 值为<code>&quot;static&quot;</code>，那么，webpack 将把所有资源编译到<code>web/app/static</code>目录下</p>
+</li>
+<li><p>assetsPublicPath<br>这个是通过 http 服务器运行的 url 路径，大多数情况下，这个是根目录（/）。如果你的后台框架对静态资源 url 前缀有要求，你仅需改变这个参数。比如不用本地的，而用线上的 CDN。</p>
+</li>
+</ol>
+<h4 id="父子组件嵌套，各个钩子函数触发顺序"><a href="#父子组件嵌套，各个钩子函数触发顺序" class="headerlink" title="父子组件嵌套，各个钩子函数触发顺序"></a>父子组件嵌套，各个钩子函数触发顺序</h4><p>偶然看到这个问题：vue 中父子组件各个钩子函数触发顺序是怎样的？一时还真背问到了，在项目中添加打印才发现是这样子的</p>
+<p><img src="https://note.youdao.com/yws/public/resource/bb7792e904a30442f11cb6c88c33cce8/xmlnote/E40E6B0ED1F5479F909A69469C83D99A/12039" alt=""></p>
+<p>顺序是：先依次触发父级组件<code>beforeCreate</code>、<code>create</code>和<code>beforeMounte</code>，再依次触发子级组件<code>beforeCreate</code>、<code>create</code>、<code>beforeMounte</code>和<code>mounted</code>，最后父级组件<code>mounted</code></p>
+<h4 id="父子组件之间通信，兄弟组件之间通信"><a href="#父子组件之间通信，兄弟组件之间通信" class="headerlink" title="父子组件之间通信，兄弟组件之间通信"></a>父子组件之间通信，兄弟组件之间通信</h4><p>这个问题基本清晰，在这归纳一下</p>
+<h5 id="1-父组件数据传给子组件"><a href="#1-父组件数据传给子组件" class="headerlink" title="1. 父组件数据传给子组件"></a>1. 父组件数据传给子组件</h5><p>通过<code>props</code>属性传递</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--父组件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">parent-component</span> <span class="attr">:parent-data</span>=<span class="string">"pdata"</span>&gt;</span><span class="tag">&lt;/<span class="name">parent-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子组件</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    parentData: &#123;</span><br><span class="line">      type: <span class="built_in">String</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="string">''</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-子组件传数据给父组件"><a href="#2-子组件传数据给父组件" class="headerlink" title="2. 子组件传数据给父组件"></a>2. 子组件传数据给父组件</h5><p>使用<code>$emit</code>派发</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--父组件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">parent-component</span> <span class="attr">:parent-data:sync</span>=<span class="string">"pdata"</span> @<span class="attr">handle-callback</span>=<span class="string">"handlerCallback"</span>&gt;</span><span class="tag">&lt;/<span class="name">parent-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handlerCallback(params) &#123;</span><br><span class="line">      <span class="comment">// do something</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子组件</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  created() &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">this</span>.$emit(<span class="string">'handleCallback'</span>, params)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">this</span>.$emit(<span class="string">'update:parentData'</span>, someData)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-兄弟组件数据传递"><a href="#3-兄弟组件数据传递" class="headerlink" title="3. 兄弟组件数据传递"></a>3. 兄弟组件数据传递</h5><ol>
+<li>对于大型项目，用 vue 官方推荐的 vuex</li>
+<li><p>EventBus</p>
+<ul>
+<li><p>提取 bus.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">const</span> bus = <span class="keyword">new</span> Vue()</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> bus</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>兄弟组件 1 发送数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bus <span class="keyword">from</span> <span class="string">'./bus'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  created() &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">this</span>.$emit(<span class="string">'busEvent1'</span>, someData)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>兄弟组件 2 接收数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bus <span class="keyword">from</span> <span class="string">'./bus'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  created() &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">this</span>.$on(<span class="string">'busEvent1'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(data)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>子组件 A <code>$emit</code>派发某个事件，再由父组件<code>@handle-callback=&quot;handlerCallback&quot;</code>监听获取数据，然后，父组件<code>$refs</code>直接访问到子组件 B 的方法，从而间接实现从子组件 A 到子组件 B 的数据传递</p>
+</li>
+</ol>
+<h4 id="props-在子组件中被重写报错"><a href="#props-在子组件中被重写报错" class="headerlink" title="props 在子组件中被重写报错"></a>props 在子组件中被重写报错</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue.esm.js?<span class="number">06e7</span>:<span class="number">591</span> [Vue warn]: Avoid mutating a prop directly since the value will be overwritten whenever the parent component re-renders. Instead, use a data or computed property based on the prop<span class="string">'s value. Prop being mutated: "isShow"</span></span><br></pre></td></tr></table></figure>
+<p><strong>解决方案</strong><br><code>props</code>传过来的参数通过<code>Vue.$emit</code>提交修改</p>
+<h4 id="在props和data中使用this"><a href="#在props和data中使用this" class="headerlink" title="在props和data中使用this"></a>在<code>props</code>和<code>data</code>中使用<code>this</code></h4><p>在 Vue2.2.2 或更高版本才能这样使用，低于这个版本时，注入的值会在<code>props</code>和<code>data</code>初始化之后得到。</p>
+<h4 id="对于高阶插件-组件库，解决组件与其子孙组件数据传输问题"><a href="#对于高阶插件-组件库，解决组件与其子孙组件数据传输问题" class="headerlink" title="对于高阶插件/组件库，解决组件与其子孙组件数据传输问题"></a>对于高阶插件/组件库，解决组件与其子孙组件数据传输问题</h4><ol>
+<li><p>解决方案一：<code>$attrs</code>和<code>$listener</code></p>
+<p>使用属性和方法不通过<code>props</code>传递，在子孙组件中直接用<code>$attrs</code>和<code>$listeners</code>接收。不过支持 v2.4.0+。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父级组件</span></span><br><span class="line">&lt;ul id=<span class="string">"app6"</span>&gt;</span><br><span class="line">	&lt;item</span><br><span class="line">		<span class="class"><span class="keyword">class</span></span>=<span class="string">"item"</span></span><br><span class="line">		:model=<span class="string">"treeData"</span></span><br><span class="line">		:count=<span class="string">"123"</span></span><br><span class="line">		@abc=<span class="string">"function()&#123;&#125;"</span></span><br><span class="line">	&gt;<span class="xml"><span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 子孙组件</span></span><br><span class="line"><span class="regexp">inheritAttrs: false,</span></span><br><span class="line"><span class="regexp">created () &#123;</span></span><br><span class="line"><span class="regexp">    let attrs = this.$attrs;</span></span><br><span class="line"><span class="regexp">    console.log('mode:', attrs.mode);</span></span><br><span class="line"><span class="regexp">    console.log('count:', attrs.count);</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    let listeners = this.$listeners;</span></span><br><span class="line"><span class="regexp">    console.log('bac:', listeners.abc);</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解决方案二：<code>provide/inject</code></p>
+<p>父级组件传入<code>provide</code>数据选项，子孙组件注入<code>inject</code>数据。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件</span></span><br><span class="line">provide: &#123;</span><br><span class="line">  foo: <span class="string">'bar'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子孙组件</span></span><br><span class="line">inject: [<span class="string">'foo'</span>] <span class="comment">// or inject: &#123; name: 'foo', defult: '' &#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/09/02/vue-cli中遇到的坑/">vue-cli中遇到的坑</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Little ice</a></p>
+        <p><span>发布时间:</span>2017-09-02, 09:00:30</p>
+        <p><span>最后更新:</span>2018-09-09, 01:01:52</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/09/02/vue-cli中遇到的坑/" title="vue-cli中遇到的坑">https://leekiwi.github.io/2017/09/02/vue-cli中遇到的坑/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://leekiwi.github.io/2017/09/02/vue-cli中遇到的坑/　　作者: Little ice" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/05/06/css中的一些坑/">
+                    css中的一些坑
+                </a>
+            </div>
+        
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#vue-单文件-import-css-文件，不加-会报错"><span class="toc-number">1.</span> <span class="toc-text">vue 单文件@import css 文件，不加~会报错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue-cli-中-config-index-js-配置说明"><span class="toc-number">2.</span> <span class="toc-text">vue-cli 中 config/index.js 配置说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#父子组件嵌套，各个钩子函数触发顺序"><span class="toc-number">3.</span> <span class="toc-text">父子组件嵌套，各个钩子函数触发顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#父子组件之间通信，兄弟组件之间通信"><span class="toc-number">4.</span> <span class="toc-text">父子组件之间通信，兄弟组件之间通信</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-父组件数据传给子组件"><span class="toc-number">4.1.</span> <span class="toc-text">1. 父组件数据传给子组件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-子组件传数据给父组件"><span class="toc-number">4.2.</span> <span class="toc-text">2. 子组件传数据给父组件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-兄弟组件数据传递"><span class="toc-number">4.3.</span> <span class="toc-text">3. 兄弟组件数据传递</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#props-在子组件中被重写报错"><span class="toc-number">5.</span> <span class="toc-text">props 在子组件中被重写报错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在props和data中使用this"><span class="toc-number">6.</span> <span class="toc-text">在props和data中使用this</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对于高阶插件-组件库，解决组件与其子孙组件数据传输问题"><span class="toc-number">7.</span> <span class="toc-text">对于高阶插件/组件库，解决组件与其子孙组件数据传输问题</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'https://leekiwi.github.io/2017/09/02/vue-cli中遇到的坑/';
+            this.page.identifier = '2017/09/02/vue-cli中遇到的坑/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/05/06/css中的一些坑/" title="上一篇: css中的一些坑">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/10/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/干掉状态从session到token/">干掉状态从session到token</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/03/前端必备vscode插件/">前端必备vscode插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/27/对MVC、MVP和MVVM的简单认识/">对MVC、MVP和MVVM的简单认识</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/22/正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/理解同步、异步和事件循环/">理解同步、异步和事件循环</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/22/搞定css三列布局/">搞定css三列布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/06/css中的一些坑/">css中的一些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/02/vue-cli中遇到的坑/">vue-cli中遇到的坑</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        <i class="fa fa-copyright"></i>
+        
+              2018
+                Little ice
+      </div>
+      <div class="footer-right">
+        <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a> Theme
+        <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by Little ice
+        <i class="fa fa-heart animated infinite pulse"></i>
+      </div>
+    </div>
+    
+      <div class="visit">
+        
+          <span id="busuanzi_container_site_pv" style='display:none'>
+            <span id="site-visit" title="本站到访数">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span id="busuanzi_value_site_uv"></span>
+            </span>
+          </span>
+          
+            
+              <span>| </span>
+              
+                
+                  <span id="busuanzi_container_page_pv" style='display:none'>
+                    <span id="page-visit" title="本页阅读量">
+                      <i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i>
+                      <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                  </span>
+                  
+      </div>
+      
+  </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 4;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
