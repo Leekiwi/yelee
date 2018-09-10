@@ -882,9 +882,9 @@ a {
 }
 #header .header-nav .social .GitHub {
   background: url("//pic.sfont.cn/svg/img/eekd.svg") no-repeat #fff;
-  -webkit-background-size: 90%;
-  -moz-background-size: 90%;
-  background-size: 90%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
   background-position: 50% 100%;
 }
 #header .header-nav .social .CodePen {
