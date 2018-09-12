@@ -2345,6 +2345,18 @@ pre .javascript .function {
 #footer .visit #page-visit:hover .fa {
   color: #333;
 }
+.share {
+  padding-left: 40px;
+  margin: 1em auto 0.5em;
+  opacity: 0.75;
+}
+.share:hover {
+  opacity: 1;
+}
+.addthis_sharing_toolbox {
+  margin-top: 0.5em;
+  margin-left: -2px;
+}
 #page-nav {
   text-align: center;
   margin-top: 30px;
