@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Little ice</title>
+  
+  <subtitle>爱吃kiwi的博客-前端博客-web前端技术</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://leekiwi.github.io/"/>
+  <updated>2018-11-13T05:24:12.560Z</updated>
+  <id>https://leekiwi.github.io/</id>
+  
+  <author>
+    <name>爱吃kiwi</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你不知道的vue技巧</title>
+    <link href="https://leekiwi.github.io/2018/11/10/vue%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E4%B8%8E%E5%A1%AB%E5%9D%91/"/>
+    <id>https://leekiwi.github.io/2018/11/10/vue开发踩坑与填坑/</id>
+    <published>2018-11-10T06:30:30.000Z</published>
+    <updated>2018-11-13T05:24:12.560Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/877bb698gy1fx6d7s8088j20m80cijsy.jpg&quot; width=&quot;50%/&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="vue" scheme="https://leekiwi.github.io/categories/vue/"/>
+    
+    
+      <category term="college" scheme="https://leekiwi.github.io/tags/college/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebGL获取Context时的附加参数</title>
+    <link href="https://leekiwi.github.io/2018/11/08/WebGL%E8%8E%B7%E5%8F%96Context%E6%97%B6%E7%9A%84%E9%99%84%E5%8A%A0%E5%8F%82%E6%95%B0/"/>
+    <id>https://leekiwi.github.io/2018/11/08/WebGL获取Context时的附加参数/</id>
+    <published>2018-11-08T01:51:07.029Z</published>
+    <updated>2018-11-08T01:51:15.679Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="图形渲染" scheme="https://leekiwi.github.io/tags/%E5%9B%BE%E5%BD%A2%E6%B8%B2%E6%9F%93/"/>
+    
+      <category term="HTML5" scheme="https://leekiwi.github.io/tags/HTML5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用canvas的toDataURL()将图片转为dataURL(base64)</title>
+    <link href="https://leekiwi.github.io/2018/11/07/%E7%94%A8canvas%E7%9A%84toDataURL()%E5%B0%86%E5%9B%BE%E7%89%87%E8%BD%AC%E4%B8%BAdataURL(base64)/"/>
+    <id>https://leekiwi.github.io/2018/11/07/用canvas的toDataURL()将图片转为dataURL(base64)/</id>
+    <published>2018-11-07T06:30:30.000Z</published>
+    <updated>2018-11-07T07:06:02.492Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="canvas" scheme="https://leekiwi.github.io/categories/canvas/"/>
+    
+    
+      <category term="college" scheme="https://leekiwi.github.io/tags/college/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>canvas API学习小记</title>
+    <link href="https://leekiwi.github.io/2018/11/01/canvas/"/>
+    <id>https://leekiwi.github.io/2018/11/01/canvas/</id>
+    <published>2018-11-01T10:30:30.000Z</published>
+    <updated>2018-11-01T07:24:12.792Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="canvas" scheme="https://leekiwi.github.io/categories/canvas/"/>
+    
+    
+      <category term="画布" scheme="https://leekiwi.github.io/tags/%E7%94%BB%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>收集小屋</title>
+    <link href="https://leekiwi.github.io/2018/11/01/%E6%94%B6%E9%9B%86%E5%B0%8F%E5%B1%8B/"/>
+    <id>https://leekiwi.github.io/2018/11/01/收集小屋/</id>
+    <published>2018-11-01T06:30:30.000Z</published>
+    <updated>2018-11-17T09:13:53.909Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ofen looking" scheme="https://leekiwi.github.io/categories/ofen-looking/"/>
+    
+    
+      <category term="college" scheme="https://leekiwi.github.io/tags/college/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目结构tree图</title>
+    <link href="https://leekiwi.github.io/2018/10/13/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E5%9B%BE/"/>
+    <id>https://leekiwi.github.io/2018/10/13/项目结构图/</id>
+    <published>2018-10-13T13:48:30.000Z</published>
+    <updated>2018-11-12T03:54:29.423Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://leekiwi.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="实用" scheme="https://leekiwi.github.io/tags/%E5%AE%9E%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm报错</title>
+    <link href="https://leekiwi.github.io/2018/10/13/npm%E6%8A%A5%E9%94%99%EF%BC%9Aerror%20code%20EINTEGRITY/"/>
+    <id>https://leekiwi.github.io/2018/10/13/npm报错：error code EINTEGRITY/</id>
+    <published>2018-10-13T10:30:30.000Z</published>
+    <updated>2018-11-12T06:08:46.294Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/877bb698gy1fx555oxfabj20iu05gjrf.jpg&quot; width=&quot;50%&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工作常见问题" scheme="https://leekiwi.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="npm" scheme="https://leekiwi.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端</title>
+    <link href="https://leekiwi.github.io/2018/09/13/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    <id>https://leekiwi.github.io/2018/09/13/前端面试/</id>
+    <published>2018-09-13T10:36:30.000Z</published>
+    <updated>2018-11-14T06:06:31.611Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://faithlove.github.io/pic/2018/RMTP_1/topPicPre.png&quot; width=&quot;50%&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端面试" scheme="https://leekiwi.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="前端面试" scheme="https://leekiwi.github.io/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6中简约强大数组操作组合</title>
+    <link href="https://leekiwi.github.io/2018/09/07/ES6%E4%B8%AD%E7%AE%80%E7%BA%A6%E5%BC%BA%E5%A4%A7%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E7%BB%84%E5%90%88/"/>
+    <id>https://leekiwi.github.io/2018/09/07/ES6中简约强大数组操作组合/</id>
+    <published>2018-09-07T10:25:20.000Z</published>
+    <updated>2018-09-10T10:18:54.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;ES6-数组新增方法&quot;&gt;&lt;a href=&quot;#ES6-数组新增方法&quot; class=&quot;headerlink&quot; title=&quot;ES6 数组新增方法&quot;&gt;&lt;/a&gt;ES6 数组新增方法&lt;/h2&gt;&lt;h3 id=&quot;reduce&quot;&gt;&lt;a href=&quot;#reduce&quot; class=&quot;headerlink&quot; title=&quot;reduce&quot;&gt;&lt;/a&gt;reduce&lt;/h3&gt;&lt;p&gt;&lt;code&gt;array.reduce(callback[, initialValue])&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="https://leekiwi.github.io/categories/ES6/"/>
+    
+    
+      <category term="javascript" scheme="https://leekiwi.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>干掉状态从session到token</title>
+    <link href="https://leekiwi.github.io/2018/09/07/%E5%B9%B2%E6%8E%89%E7%8A%B6%E6%80%81%E4%BB%8Esession%E5%88%B0token/"/>
+    <id>https://leekiwi.github.io/2018/09/07/干掉状态从session到token/</id>
+    <published>2018-09-07T08:00:30.000Z</published>
+    <updated>2018-09-08T17:02:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;美好的旧时光&quot;&gt;&lt;a href=&quot;#美好的旧时光&quot; class=&quot;headerlink&quot; title=&quot;美好的旧时光&quot;&gt;&lt;/a&gt;美好的旧时光&lt;/h2&gt;&lt;p&gt;我经常怀念三十年前那美好的旧时光， 工作很轻松， 生活很悠闲。&lt;/p&gt;
+&lt;p&gt;上班的时候偶尔有些 HTTP 的请求发到我这里， 我简单的看一下， 取出相对应的 html 文档，图片，发回去就可以了， 然后就可以继续喝茶聊天。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="状态保持" scheme="https://leekiwi.github.io/categories/%E7%8A%B6%E6%80%81%E4%BF%9D%E6%8C%81/"/>
+    
+    
+      <category term="http" scheme="https://leekiwi.github.io/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>element-ui更换主题和按需引入组件</title>
+    <link href="https://leekiwi.github.io/2018/09/04/element-ui%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E5%92%8C%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6/"/>
+    <id>https://leekiwi.github.io/2018/09/04/element-ui更换主题和按需引入组件/</id>
+    <published>2018-09-04T11:40:30.000Z</published>
+    <updated>2018-09-10T10:17:13.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;element-ui-使用初体验&quot;&gt;&lt;a href=&quot;#element-ui-使用初体验&quot; class=&quot;headerlink&quot; title=&quot;element-ui 使用初体验&quot;&gt;&lt;/a&gt;element-ui 使用初体验&lt;/h2&gt;&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;手上有些项目用的&lt;code&gt;element-ui&lt;/code&gt;，刚好有空琢磨一下怎么减小打包文件大小和打包速度方面，为了演示实验，用 vue-cli 生成初始项目，在这仅对 element-ui 主题和组件方面来优化。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="vue" scheme="https://leekiwi.github.io/categories/vue/"/>
+    
+    
+      <category term="vue" scheme="https://leekiwi.github.io/tags/vue/"/>
+    
+      <category term="element-ui" scheme="https://leekiwi.github.io/tags/element-ui/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端必备vscode插件</title>
+    <link href="https://leekiwi.github.io/2018/09/03/%E5%89%8D%E7%AB%AF%E5%BF%85%E5%A4%87vscode%E6%8F%92%E4%BB%B6/"/>
+    <id>https://leekiwi.github.io/2018/09/03/前端必备vscode插件/</id>
+    <published>2018-09-03T01:00:30.000Z</published>
+    <updated>2018-09-08T17:02:12.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;这篇文章只要让你做一些基础的配置，把 vscode 变得更加顺手；&lt;br&gt;插件的需求不是一成不变，有些插件我已经移除了。。在最新的 VSCODE 1.9.1 中，&lt;br&gt;部分以前用插件实现的功能已经集成了，那就没有必要存在了。这里就不做推荐了复制代码&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="实用" scheme="https://leekiwi.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
+    
+    
+      <category term="插件 开发" scheme="https://leekiwi.github.io/tags/%E6%8F%92%E4%BB%B6-%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nodejs学习笔记</title>
+    <link href="https://leekiwi.github.io/2018/08/28/node.js%20study%20note/"/>
+    <id>https://leekiwi.github.io/2018/08/28/node.js study note/</id>
+    <published>2018-08-28T12:42:30.000Z</published>
+    <updated>2018-09-10T10:16:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Nodejs-学习笔记&quot;&gt;&lt;a href=&quot;#Nodejs-学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Nodejs 学习笔记&quot;&gt;&lt;/a&gt;Nodejs 学习笔记&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;node 内部对模块输出 module.exports 的实现&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="nodejs" scheme="https://leekiwi.github.io/categories/nodejs/"/>
+    
+    
+      <category term="nodejs" scheme="https://leekiwi.github.io/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CDN原理介绍</title>
+    <link href="https://leekiwi.github.io/2018/08/27/CDN%E5%8E%9F%E7%90%86%E7%90%86%E8%A7%A3/"/>
+    <id>https://leekiwi.github.io/2018/08/27/CDN原理理解/</id>
+    <published>2018-08-27T11:00:30.000Z</published>
+    <updated>2018-11-13T05:35:38.913Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/877bb698gy1fx6dljndx1j20m80b4wep.jpg&quot; width=&quot;50%/&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="用户体验" scheme="https://leekiwi.github.io/categories/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+    
+      <category term="前端性能优化" scheme="https://leekiwi.github.io/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对MVC、MVP和MVVM的简单认识</title>
+    <link href="https://leekiwi.github.io/2018/08/27/%E5%AF%B9MVC%E3%80%81MVP%E5%92%8CMVVM%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%A4%E8%AF%86/"/>
+    <id>https://leekiwi.github.io/2018/08/27/对MVC、MVP和MVVM的简单认识/</id>
+    <published>2018-08-27T11:00:30.000Z</published>
+    <updated>2018-09-10T09:44:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;MVVM-的前世与今生&quot;&gt;&lt;a href=&quot;#MVVM-的前世与今生&quot; class=&quot;headerlink&quot; title=&quot;MVVM 的前世与今生&quot;&gt;&lt;/a&gt;MVVM 的前世与今生&lt;/h2&gt;&lt;h3 id=&quot;1-先聊一下-MVC&quot;&gt;&lt;a href=&quot;#1-先聊一下-MVC&quot; class=&quot;headerlink&quot; title=&quot;1. 先聊一下 MVC&quot;&gt;&lt;/a&gt;1. 先聊一下 MVC&lt;/h3&gt;&lt;p&gt;MVC：Model（模型） View（视图） Controller（控制器），主要是基于分层的目的，让彼此的职责分开。&lt;/p&gt;
+&lt;p&gt;View 通过 Controller 和 Model 联系，Controller 是 View 和 Model 的协调者，view 和 Model 不直接联系，基本联系都是单向的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="其它" scheme="https://leekiwi.github.io/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+      <category term="设计模式" scheme="https://leekiwi.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode 实现设备上设置统一</title>
+    <link href="https://leekiwi.github.io/2018/08/24/vscode%E8%AE%BE%E5%A4%87%E5%90%8C%E6%AD%A5/"/>
+    <id>https://leekiwi.github.io/2018/08/24/vscode设备同步/</id>
+    <published>2018-08-24T06:48:37.000Z</published>
+    <updated>2018-09-16T13:16:15.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一键同步-vscode-上的插件&quot;&gt;&lt;a href=&quot;#一键同步-vscode-上的插件&quot; class=&quot;headerlink&quot; title=&quot;一键同步 vscode 上的插件&quot;&gt;&lt;/a&gt;一键同步 vscode 上的插件&lt;/h2&gt;&lt;p&gt;准备工作：电脑上需安装 VSCode，拥有一个 github 账户。实现同步的功能主要依赖于 VSCode 插件 “Settings Sync”&lt;/p&gt;
+&lt;h1 id=&quot;Setting-Sync-可同步包含的所有扩展和完整的用户文件夹&quot;&gt;&lt;a href=&quot;#Setting-Sync-可同步包含的所有扩展和完整的用户文件夹&quot; class=&quot;headerlink&quot; title=&quot;Setting Sync 可同步包含的所有扩展和完整的用户文件夹&quot;&gt;&lt;/a&gt;Setting Sync 可同步包含的所有扩展和完整的用户文件夹&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="vscode" scheme="https://leekiwi.github.io/categories/vscode/"/>
+    
+    
+      <category term="setting" scheme="https://leekiwi.github.io/tags/setting/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="https://leekiwi.github.io/2018/08/22/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>https://leekiwi.github.io/2018/08/22/正则表达式/</id>
+    <published>2018-08-22T07:45:30.000Z</published>
+    <updated>2018-09-10T09:45:55.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;正则规则汇总&quot;&gt;&lt;a href=&quot;#正则规则汇总&quot; class=&quot;headerlink&quot; title=&quot;正则规则汇总&quot;&gt;&lt;/a&gt;正则规则汇总&lt;/h2&gt;&lt;p&gt;对字符串的处理，一般分为字符串操作和正则操作。&lt;/p&gt;
+&lt;h5 id=&quot;字符串操作&quot;&gt;&lt;a href=&quot;#字符串操作&quot; class=&quot;headerlink&quot; title=&quot;字符串操作&quot;&gt;&lt;/a&gt;字符串操作&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;str.search(regStr) 返回 regStr 在 str 中第一个出现的位置&lt;/li&gt;
+&lt;li&gt;str.replace(regStr,newStr) 返回替换在 str 中 regStr 后字符串&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="https://leekiwi.github.io/categories/javascript/"/>
+    
+    
+      <category term="javascript 正则" scheme="https://leekiwi.github.io/tags/javascript-%E6%AD%A3%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>理解同步、异步和事件循环</title>
+    <link href="https://leekiwi.github.io/2018/08/20/%E7%90%86%E8%A7%A3%E5%90%8C%E6%AD%A5%E3%80%81%E5%BC%82%E6%AD%A5%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/"/>
+    <id>https://leekiwi.github.io/2018/08/20/理解同步、异步和事件循环/</id>
+    <published>2018-08-20T12:42:30.000Z</published>
+    <updated>2018-11-12T04:46:51.655Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/877bb698gy1fx56k3udqfj20xc0mbdjf.jpg&quot; width=&quot;50%/&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="js高级" scheme="https://leekiwi.github.io/categories/js%E9%AB%98%E7%BA%A7/"/>
+    
+    
+      <category term="javascript" scheme="https://leekiwi.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git简记</title>
+    <link href="https://leekiwi.github.io/2018/07/27/Git%E7%AE%80%E8%AE%B0/"/>
+    <id>https://leekiwi.github.io/2018/07/27/Git简记/</id>
+    <published>2018-07-27T13:04:26.000Z</published>
+    <updated>2018-11-12T04:45:07.690Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/877bb698gy1fx55855iuwj20ow0owjrv.jpg&quot; width=&quot;50%/&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="git" scheme="https://leekiwi.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://leekiwi.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搞定css三列布局</title>
+    <link href="https://leekiwi.github.io/2018/07/22/%E6%90%9E%E5%AE%9Acss%E4%B8%89%E5%88%97%E5%B8%83%E5%B1%80/"/>
+    <id>https://leekiwi.github.io/2018/07/22/搞定css三列布局/</id>
+    <published>2018-07-22T11:32:30.000Z</published>
+    <updated>2018-09-10T09:47:13.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;三列布局&quot;&gt;&lt;a href=&quot;#三列布局&quot; class=&quot;headerlink&quot; title=&quot;三列布局&quot;&gt;&lt;/a&gt;三列布局&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;谈到布局，首先就要想到定位，当别人问我，css 的 position 定位有哪些取值，分别表示什么意思？呃…..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;定位&quot;&gt;&lt;a href=&quot;#定位&quot; class=&quot;headerlink&quot; title=&quot;定位&quot;&gt;&lt;/a&gt;定位&lt;/h3&gt;&lt;p&gt;position 有六个属性值：static、relative、absolute、fixed、sticky 和 inherit。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="css" scheme="https://leekiwi.github.io/categories/css/"/>
+    
+    
+      <category term="css" scheme="https://leekiwi.github.io/tags/css/"/>
+    
+      <category term="布局" scheme="https://leekiwi.github.io/tags/%E5%B8%83%E5%B1%80/"/>
+    
+  </entry>
+  
+</feed>
