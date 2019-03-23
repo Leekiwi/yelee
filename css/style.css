@@ -881,7 +881,7 @@ a {
   background-size: 103%;
 }
 #header .header-nav .social .GitHub {
-  background: url("//pic.sfont.cn/svg/img/eekd.svg") no-repeat #fff;
+  background: url("//cdn.bootcss.com/logos/0.2.0/github-octocat.svg") no-repeat #fff;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%;
