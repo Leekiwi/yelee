@@ -351,35 +351,1038 @@ zh-Hans"
           <div class="body-wrap">
             
   
+    <article id="post-项目结构图" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/13/项目结构图/" class="article-date">
+      <time datetime="2018-10-13T13:48:30.000Z" itemprop="datePublished">2018-10-13</time>
+</a>
+
+
+    </div>
     
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/13/项目结构图/">项目结构tree图</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                                    
+                                          <h2 id="目录结构介绍"><a href="#目录结构介绍" class="headerlink" title="目录结构介绍"></a>目录结构介绍</h2><pre><code>|-- build                            // webpack配置文件
+|-- config                           // 项目打包路径
+|-- src                              // 源码目录
+|   |-- components                   // 组件
+|       |-- common                   // 公共组件
+|           |-- bus.js                // Event Bus
+|           |-- Header.vue           // 公共头部
+|           |-- Home.vue                // 公共路由入口
+|           |-- Sidebar.vue          // 公共左边栏
+|           |-- Tags.vue                // 页面切换标签组件
+|       |-- page                        // 主要路由页面
+|           |-- 403.vue
+|           |-- 404.vue
+|           |-- BaseCharts.vue       // 基础图表
+|           |-- BaseForm.vue         // 基础表单
+|           |-- BaseTable.vue        // 基础表格
+|           |-- DashBoard.vue        // 系统首页
+|           |-- DragList.vue         // 拖拽列表组件
+|           |-- Icon.vue             // 自定义图标组件
+|           |-- Login.vue               // 登录
+|           |-- Markdown.vue         // markdown组件
+|           |-- Premission.vue       // 权限测试组件
+|           |-- Upload.vue           // 图片上传
+|           |-- VueEditor.vue        // 富文本编辑器
+|   |-- App.vue                      // 页面入口文件
+|   |-- main.js                      // 程序入口文件，加载各种公共组件
+|-- .babelrc                         // ES6语法编译配置
+|-- .editorconfig                    // 代码编写规格
+|-- .gitignore                       // 忽略的文件
+|-- index.html                       // 入口html文件
+|-- package.json                     // 项目及工具的依赖配置文件
+|-- README.md                        // 说明
+</code></pre>
+                                            
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/实用/">实用</a></li></ul>
+    </div>
+
+                                
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
       
-    
+</article>
+
+
+  
+
+        
       
+    <article id="post-npm报错：error-code-EINTEGRITY" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/13/npm报错：error-code-EINTEGRITY/" class="article-date">
+      <time datetime="2018-10-13T10:30:30.000Z" itemprop="datePublished">2018-10-13</time>
+</a>
+
+
+    </div>
     
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/13/npm报错：error-code-EINTEGRITY/">npm报错：error code EINTEGRITY</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                                    
+                                          <p>今天 npm install 时候遇到类似的错误</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法:"></a>解决办法:</h3><blockquote>
+<p>一、升级 npm<br><code>npm i -g npm</code></p>
+</blockquote>
+<blockquote>
+<p>二、删除 package-lock.json</p>
+</blockquote>
+<blockquote>
+<p>三、删除缓存目录下的所有数据<br><code>npm cache clean –force</code></p>
+</blockquote>
+<blockquote>
+<p>四、验证缓存数据的有效性和完整性，清理垃圾数据<br><code>npm cache verify</code></p>
+</blockquote>
+<blockquote>
+<p>五、包问题<br>包是在 windows 下发布的，在 linux 安装错误。<br>排查方法：看日志，去除相关的包配置，再安装测试</p>
+</blockquote>
+<p>一般到第四步即可完美解决</p>
+
+                                            
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                          <div class="article-pop-out tagcloud">
+                            <a class="">置顶</a>
+                          </div>
+                          
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/工作常见问题/">工作常见问题</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
+    </div>
+
+                                
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
       
-    
+</article>
+
+
+  
+
+        
       
+    <article id="post-前端面试" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/13/前端面试/" class="article-date">
+      <time datetime="2018-09-13T10:36:30.000Z" itemprop="datePublished">2018-09-13</time>
+</a>
+
+
+    </div>
     
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/13/前端面试/">前端</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              The article has been encrypted, please enter your password to view.<br>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/前端面试/">前端面试</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端面试/">前端面试</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/09/13/前端面试/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
       
-    
+</article>
+
+
+  
+
+        
       
+    <article id="post-ES6中简约强大数组操作组合" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/07/ES6中简约强大数组操作组合/" class="article-date">
+      <time datetime="2018-09-07T10:25:20.000Z" itemprop="datePublished">2018-09-07</time>
+</a>
+
+
+    </div>
     
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/07/ES6中简约强大数组操作组合/">ES6中简约强大数组操作组合</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="ES6-数组新增方法"><a href="#ES6-数组新增方法" class="headerlink" title="ES6 数组新增方法"></a>ES6 数组新增方法</h2><h3 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h3><p><code>array.reduce(callback[, initialValue])</code></p>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/ES6/">ES6</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/09/07/ES6中简约强大数组操作组合/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
       
-    
+</article>
+
+
+  
+
+        
       
+    <article id="post-干掉状态从session到token" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/07/干掉状态从session到token/" class="article-date">
+      <time datetime="2018-09-07T08:00:30.000Z" itemprop="datePublished">2018-09-07</time>
+</a>
+
+
+    </div>
     
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/07/干掉状态从session到token/">干掉状态从session到token</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="美好的旧时光"><a href="#美好的旧时光" class="headerlink" title="美好的旧时光"></a>美好的旧时光</h2><p>我经常怀念三十年前那美好的旧时光， 工作很轻松， 生活很悠闲。</p>
+<p>上班的时候偶尔有些 HTTP 的请求发到我这里， 我简单的看一下， 取出相对应的 html 文档，图片，发回去就可以了， 然后就可以继续喝茶聊天。</p>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/状态保持/">状态保持</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/09/07/干掉状态从session到token/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
       
-    
+</article>
+
+
+  
+
+        
       
+    <article id="post-element-ui更换主题和按需引入组件" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/04/element-ui更换主题和按需引入组件/" class="article-date">
+      <time datetime="2018-09-04T11:40:30.000Z" itemprop="datePublished">2018-09-04</time>
+</a>
+
+
+    </div>
     
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/04/element-ui更换主题和按需引入组件/">element-ui更换主题和按需引入组件</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="element-ui-使用初体验"><a href="#element-ui-使用初体验" class="headerlink" title="element-ui 使用初体验"></a>element-ui 使用初体验</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>手上有些项目用的<code>element-ui</code>，刚好有空琢磨一下怎么减小打包文件大小和打包速度方面，为了演示实验，用 vue-cli 生成初始项目，在这仅对 element-ui 主题和组件方面来优化。</p>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/vue/">vue</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element-ui/">element-ui</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/09/04/element-ui更换主题和按需引入组件/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
       
-    
+</article>
+
+
+  
+
+        
       
+    <article id="post-前端必备vscode插件" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/03/前端必备vscode插件/" class="article-date">
+      <time datetime="2018-09-03T01:00:30.000Z" itemprop="datePublished">2018-09-03</time>
+</a>
+
+
+    </div>
     
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/03/前端必备vscode插件/">前端必备vscode插件</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇文章只要让你做一些基础的配置，把 vscode 变得更加顺手；<br>插件的需求不是一成不变，有些插件我已经移除了。。在最新的 VSCODE 1.9.1 中，<br>部分以前用插件实现的功能已经集成了，那就没有必要存在了。这里就不做推荐了复制代码</p>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/实用/">实用</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/插件-开发/">插件 开发</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/09/03/前端必备vscode插件/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
       
-    
+</article>
+
+
+  
+
+        
       
+    <article id="post-node-js-study-note" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/28/node-js-study-note/" class="article-date">
+      <time datetime="2018-08-28T12:42:30.000Z" itemprop="datePublished">2018-08-28</time>
+</a>
+
+
+    </div>
     
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/28/node-js-study-note/">nodejs学习笔记</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="Nodejs-学习笔记"><a href="#Nodejs-学习笔记" class="headerlink" title="Nodejs 学习笔记"></a>Nodejs 学习笔记</h2><p><strong>node 内部对模块输出 module.exports 的实现</strong></p>
+<p>变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数</p>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/nodejs/">nodejs</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/08/28/node-js-study-note/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
+      
+</article>
+
+
+  
+
+        
+      
+    <article id="post-对MVC、MVP和MVVM的简单认识" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/27/对MVC、MVP和MVVM的简单认识/" class="article-date">
+      <time datetime="2018-08-27T11:00:30.000Z" itemprop="datePublished">2018-08-27</time>
+</a>
+
+
+    </div>
+    
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/27/对MVC、MVP和MVVM的简单认识/">对MVC、MVP和MVVM的简单认识</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="MVVM-的前世与今生"><a href="#MVVM-的前世与今生" class="headerlink" title="MVVM 的前世与今生"></a>MVVM 的前世与今生</h2><h3 id="1-先聊一下-MVC"><a href="#1-先聊一下-MVC" class="headerlink" title="1. 先聊一下 MVC"></a>1. 先聊一下 MVC</h3><p>MVC：Model（模型） View（视图） Controller（控制器），主要是基于分层的目的，让彼此的职责分开。</p>
+<p>View 通过 Controller 和 Model 联系，Controller 是 View 和 Model 的协调者，view 和 Model 不直接联系，基本联系都是单向的。</p>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/其它/">其它</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/08/27/对MVC、MVP和MVVM的简单认识/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
+      
+</article>
+
+
+  
+
+        
+      
+    <article id="post-CDN原理理解" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/27/CDN原理理解/" class="article-date">
+      <time datetime="2018-08-27T11:00:30.000Z" itemprop="datePublished">2018-08-27</time>
+</a>
+
+
+    </div>
+    
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/27/CDN原理理解/">CDN原理介绍</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="CDN-原理剖析"><a href="#CDN-原理剖析" class="headerlink" title="CDN 原理剖析"></a>CDN 原理剖析</h2><blockquote>
+<blockquote>
+<p>内容分发网络（Content delivery network 或 Content distribution network，缩写：CDN）是指一种通过互联网互相连接的电脑网络系统，利用最靠近每位用户的服务器，更快、更可靠地将音乐、图片、视频、应用程序及其他文件发送给用户，来提供高性能、可扩展性及低成本的网络内容传递给用户。</p>
+</blockquote>
+</blockquote>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/用户体验/">用户体验</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端性能优化/">前端性能优化</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/08/27/CDN原理理解/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
+      
+</article>
+
+
+  
+
+        
+      
+    <article id="post-vscode设备同步" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/24/vscode设备同步/" class="article-date">
+      <time datetime="2018-08-24T06:48:37.000Z" itemprop="datePublished">2018-08-24</time>
+</a>
+
+
+    </div>
+    
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/24/vscode设备同步/">vscode 实现设备上设置统一</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="一键同步-vscode-上的插件"><a href="#一键同步-vscode-上的插件" class="headerlink" title="一键同步 vscode 上的插件"></a>一键同步 vscode 上的插件</h2><p>准备工作：电脑上需安装 VSCode，拥有一个 github 账户。实现同步的功能主要依赖于 VSCode 插件 “Settings Sync”</p>
+<h1 id="Setting-Sync-可同步包含的所有扩展和完整的用户文件夹"><a href="#Setting-Sync-可同步包含的所有扩展和完整的用户文件夹" class="headerlink" title="Setting Sync 可同步包含的所有扩展和完整的用户文件夹"></a>Setting Sync 可同步包含的所有扩展和完整的用户文件夹</h1>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/vscode/">vscode</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/setting/">setting</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/08/24/vscode设备同步/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
+      
+</article>
+
+
+  
+
+        
+      
+    <article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/22/正则表达式/" class="article-date">
+      <time datetime="2018-08-22T07:45:30.000Z" itemprop="datePublished">2018-08-22</time>
+</a>
+
+
+    </div>
+    
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/22/正则表达式/">正则表达式</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="正则规则汇总"><a href="#正则规则汇总" class="headerlink" title="正则规则汇总"></a>正则规则汇总</h2><p>对字符串的处理，一般分为字符串操作和正则操作。</p>
+<h5 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h5><ul>
+<li>str.search(regStr) 返回 regStr 在 str 中第一个出现的位置</li>
+<li>str.replace(regStr,newStr) 返回替换在 str 中 regStr 后字符串</li>
+</ul>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript-正则/">javascript 正则</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/08/22/正则表达式/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
+      
+</article>
+
+
+  
+
+        
+      
+    <article id="post-理解同步、异步和事件循环" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/20/理解同步、异步和事件循环/" class="article-date">
+      <time datetime="2018-08-20T12:42:30.000Z" itemprop="datePublished">2018-08-20</time>
+</a>
+
+
+    </div>
+    
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/20/理解同步、异步和事件循环/">理解同步、异步和事件循环</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="JavaScript-运行机制"><a href="#JavaScript-运行机制" class="headerlink" title="JavaScript 运行机制"></a>JavaScript 运行机制</h2><ol>
+<li>所有同步任务都在主线程上执行，形成一个执行栈；</li>
+</ol>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/js高级/">js高级</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/08/20/理解同步、异步和事件循环/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
+      
+</article>
+
+
+  
+
+        
+      
+    <article id="post-Git简记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/27/Git简记/" class="article-date">
+      <time datetime="2018-07-27T13:04:26.000Z" itemprop="datePublished">2018-07-27</time>
+</a>
+
+
+    </div>
+    
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/27/Git简记/">Git简记</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="Git-食用手册"><a href="#Git-食用手册" class="headerlink" title="Git 食用手册"></a>Git 食用手册</h2><h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h3><p>最近有个项目比较赶，于是决定 8 个人一个并行完成，单独把项目拿出来用 gitea 管理，没人分一个模块开发，对应也给分支，效果不过，从中也帮助自己重新温习了一下 git 的使用，小记一下。</p>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/git/">git</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/07/27/Git简记/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
+      
+</article>
+
+
+  
+
+        
+      
+    <article id="post-搞定css三列布局" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/22/搞定css三列布局/" class="article-date">
+      <time datetime="2018-07-22T11:32:30.000Z" itemprop="datePublished">2018-07-22</time>
+</a>
+
+
+    </div>
+    
+      <div class="article-inner">
+        
+          <input type="hidden" class="isFancy" />
+          
+            
+              <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/22/搞定css三列布局/">搞定css三列布局</a>
+    </h1>
+  
+
+              </header>
+              
+                  
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        
+                              <h2 id="三列布局"><a href="#三列布局" class="headerlink" title="三列布局"></a>三列布局</h2><blockquote>
+<p>谈到布局，首先就要想到定位，当别人问我，css 的 position 定位有哪些取值，分别表示什么意思？呃…..</p>
+</blockquote>
+<h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><p>position 有六个属性值：static、relative、absolute、fixed、sticky 和 inherit。</p>
+                                
+                                  
+                    </div>
+                    
+                      <div class="article-info article-info-index">
+                        
+                            
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/css/">css</a>
+    </div>
+
+
+                              
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/布局/">布局</a></li></ul>
+    </div>
+
+                                
+                                  <p class="article-more-link">
+                                    <a href="/2018/07/22/搞定css三列布局/#more">
+                                      阅读全文 >></a>
+                                  </p>
+                                  
+                                    <div class="clearfix"></div>
+                      </div>
+                      
+      </div>
+      
+</article>
+
+
+  
+
+        
       
         
           <nav id="page-nav">
