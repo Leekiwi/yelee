@@ -1,5 +1,9 @@
-<!DOCTYPE html><html lang="
-zh-Hans"><head>
+<!DOCTYPE html>
+<html lang="
+zh-Hans"
+  >
+
+    <head>
       
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -7,10 +11,10 @@ zh-Hans"><head>
     <![endif]-->
 
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="author" content="Little ice">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="author" content="Little ice" />
         <link rel="icon" type="image/x-icon" href="/yelee/favicon.ico">
 
         
@@ -20,7 +24,7 @@ zh-Hans"><head>
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git简记">
 <meta property="og:url" content="https://leekiwi.github.io/yelee/2018/07/27/Git简记/index.html">
-<meta property="og:site_name" content="little ice's Blog">
+<meta property="og:site_name" content="little ice&#39;s Blog">
 <meta property="og:description" content="Git 食用手册0. 前言最近有个项目比较赶，于是决定 8 个人一个并行完成，单独把项目拿出来用 gitea 管理，没人分一个模块开发，对应也给分支，效果不过，从中也帮助自己重新温习了一下 git 的使用，小记一下。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://note.youdao.com/yws/public/resource/813e8f68e489060d70ccfdff42b3aecc/xmlnote/8849F03FF3934C8087DA9645B9BD9C5F/14633">
@@ -33,7 +37,7 @@ zh-Hans"><head>
                       <link rel="apple-touch-icon" href="/yelee//apple-touch-icon.png">
 
                       
-                        <link rel="alternate" href="/atom.xml" title="little ice's Blog" type="application/atom+xml">
+                        <link rel="alternate" href="/atom.xml" title="little ice&#39;s Blog" type="application/atom+xml">
                         
 
                           
@@ -41,30 +45,31 @@ zh-Hans"><head>
                             
 
                               
-                                
+                                <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
                                 
 
                                   
-                                    
+                                    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
                                     
 
                                       
                                         <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-                                        
+                                        <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css"
+                                          rel="stylesheet">
                                         
 
-                                          
+                                          <link rel="stylesheet" href="/yelee/css/style.css">
 
                                             
 
-                                                
+                                                <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
                                                 
                                                   <title>
                                                     
                                                       Git简记 |
                                                         
-                                                          little ice's Blog
+                                                          little ice&#39;s Blog
                                                   </title>
 
                                                   <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
@@ -101,7 +106,7 @@ zh-Hans"><head>
 
                                                                   
 
-    <script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/yelee/style.css');loadCss('//cdn.bootcss.com/animate.css/3.5.1/animate.min.css');loadCss('//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css');loadCss('//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css');loadCss('//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');</script><noscript><link rel="stylesheet" href="/yelee/style.css"><link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css"><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></noscript></head>
+    </head>
 
   <body>
     <div id="container">
@@ -128,12 +133,13 @@ zh-Hans"><head>
 
         
           <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off"
+              autocorrect="off" searchonload="true" />
             <i class="fa fa-times" onclick="resetSearch()"></i>
           </form>
           <div id="local-search-result"></div>
-          <p class="no-result">No results found
-            <i class="fa fa-spinner fa-pulse"></i>
+          <p class='no-result'>No results found
+            <i class='fa fa-spinner fa-pulse'></i>
           </p>
           
 
@@ -336,10 +342,10 @@ zh-Hans"><head>
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
           <div class="body-wrap">
-            <article id="post-Git简记" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <article id="post-Git简记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/yelee/2018/07/27/Git简记/" class="article-date">
@@ -351,7 +357,7 @@ zh-Hans"><head>
     
       <div class="article-inner">
         
-          <input type="hidden" class="isFancy">
+          <input type="hidden" class="isFancy" />
           
             
               <header class="article-header">
@@ -416,7 +422,7 @@ zh-Hans"><head>
 <li><p>在 Windows 上，下载<a href="http://rj.baidu.com/soft/detail/40642.html" target="_blank" rel="noopener">安装包</a>，默认下一步，安装完成即可。</p>
 </li>
 <li><p>安装完后自报家门</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name "wuwhs"</span><br><span class="line">$ git config --global user.email "email@example.com"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;wuwhs&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建版本库<br>初始化一个 Git 仓库，使用<code>git init</code>命令。添加文件到 Git 仓库，分两步：</p>
 <ol>
@@ -443,7 +449,7 @@ zh-Hans"><head>
 </li>
 </ul>
 <h3 id="3-远程仓库"><a href="#3-远程仓库" class="headerlink" title="3. 远程仓库"></a>3. 远程仓库</h3><ul>
-<li><p>创建 SSH Key。<code>$ ssh-keygen -t rsa -C "youremail@example.com"</code>。</p>
+<li><p>创建 SSH Key。<code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>。</p>
 </li>
 <li><p>登陆 GitHub，打开“Account settings”，“SSH Keys”页面。<br>然后，点“Add SSH Key”，填上任意 Title，在 Key 文本框里粘贴 id_rsa.pub 文件的内容。</p>
 </li>
@@ -489,9 +495,9 @@ zh-Hans"><head>
 <h3 id="5-标签"><a href="#5-标签" class="headerlink" title="5. 标签"></a>5. 标签</h3><ul>
 <li><p>命令<code>git tag &lt;name&gt;</code>用于新建一个标签，默认为<code>HEAD</code>,也可以指定一个 commit id。</p>
 </li>
-<li><p><code>git tag -a &lt;tagname&gt; -m "balabala..."</code>可以指定标签信息。</p>
+<li><p><code>git tag -a &lt;tagname&gt; -m &quot;balabala...&quot;</code>可以指定标签信息。</p>
 </li>
-<li><p><code>git tag -s &lt;tagname&gt; -m "balabala..."</code>可以用 PGP 签名标签。</p>
+<li><p><code>git tag -s &lt;tagname&gt; -m &quot;balabala...&quot;</code>可以用 PGP 签名标签。</p>
 </li>
 <li><p>命令<code>git tag</code>可以查看所有标签。</p>
 </li>
@@ -507,190 +513,190 @@ zh-Hans"><head>
 <h3 id="6-举个应用栗子"><a href="#6-举个应用栗子" class="headerlink" title="6. 举个应用栗子"></a>6. 举个应用栗子</h3><ol>
 <li>最初在远程创建项目仓库有<code>master</code>和<code>develp</code>分支，参与开发人员先在自己一个文件夹下，调出<code>git Bash</code>，然后输入命令<code>git init</code>，再把仓库<code>git clone</code>下来</li>
 </ol>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www</span><br><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in D:/appSoft/wampserver/wamp64/www/.git/</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www (master)</span><br><span class="line">$ git clone git@github.com:wuwhs/demo.git</span><br><span class="line">Cloning into 'demo'...</span><br><span class="line">Warning: Permanently added the RSA host key for IP address '13.229.188.59' to the list of known hosts.</span><br><span class="line">warning: You appear to have cloned an empty repository.</span><br><span class="line">Checking connectivity... done.</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www</span><br><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in D:/appSoft/wampserver/wamp64/www/.git/</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www (master)</span><br><span class="line">$ git clone git@github.com:wuwhs/demo.git</span><br><span class="line">Cloning into &apos;demo&apos;...</span><br><span class="line">Warning: Permanently added the RSA host key for IP address &apos;13.229.188.59&apos; to the list of known hosts.</span><br><span class="line">warning: You appear to have cloned an empty repository.</span><br><span class="line">Checking connectivity... done.</span><br></pre></td></tr></table></figure>
 <ol start="2">
 <li><code>cd demo</code>进入<code>clone</code>下载的目录里，用<code>git branch develop</code>在本地创建一个对应的<code>develop</code>分支</li>
 </ol>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www (master)</span><br><span class="line">$ cd demo</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git branch develop</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git branch</span><br><span class="line">  develop</span><br><span class="line">* master</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www (master)</span><br><span class="line">$ cd demo</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git branch develop</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git branch</span><br><span class="line">  develop</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
 <p>再次用<code>git branch</code>查看已经新建了一个<code>develop</code>分支</p>
 <ol start="3">
 <li><code>git checkout develop</code>切换到当前<code>develop</code>分支</li>
 </ol>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git checkout develop</span><br><span class="line">Switched to branch 'develop'</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git checkout develop</span><br><span class="line">Switched to branch &apos;develop&apos;</span><br></pre></td></tr></table></figure>
 <ol start="4">
 <li>用<code>git pull origin develop:develop</code>，即：<code>git pull origin &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</code>，当本地和远程分支名相同时，可以简写成一个，也就是<code>git pull origin develop</code>，拉取远程<code>develop</code>分支完成，然后开发人员就可以在这个分支上工作了</li>
 </ol>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git pull origin develop:develop</span><br><span class="line">remote: Counting objects: 3, done.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (3/3), done.</span><br><span class="line">From github.com:wuwhs/demo</span><br><span class="line">   7ff2cb0..7ab2842  develop    -&gt; develop</span><br><span class="line">   7ff2cb0..7ab2842  develop    -&gt; origin/develop</span><br><span class="line">warning: fetch updated the current branch head.</span><br><span class="line">fast-forwarding your working tree from</span><br><span class="line">commit 7ff2cb0627be357fa15db4e38e1bfe8fc820b8ec.</span><br><span class="line">Already up-to-date.</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git pull origin develop:develop</span><br><span class="line">remote: Counting objects: 3, done.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (3/3), done.</span><br><span class="line">From github.com:wuwhs/demo</span><br><span class="line">   7ff2cb0..7ab2842  develop    -&gt; develop</span><br><span class="line">   7ff2cb0..7ab2842  develop    -&gt; origin/develop</span><br><span class="line">warning: fetch updated the current branch head.</span><br><span class="line">fast-forwarding your working tree from</span><br><span class="line">commit 7ff2cb0627be357fa15db4e38e1bfe8fc820b8ec.</span><br><span class="line">Already up-to-date.</span><br></pre></td></tr></table></figure>
 <ol start="5">
 <li>当一天了工作完成，要提交到远程分支，首先要拉取一下别人提交的代码，防止版本冲突</li>
 </ol>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git pull</span><br><span class="line">remote: Counting objects: 3, done.</span><br><span class="line">remote: Compressing objects: 100% (2/2), done.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (3/3), done.</span><br><span class="line">From github.com:wuwhs/demo</span><br><span class="line">   f848dc7..d696375  develop    -&gt; origin/develop</span><br><span class="line">Updating f848dc7..d696375</span><br><span class="line">Fast-forward</span><br><span class="line"> demo.txt | 2 ++</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git pull</span><br><span class="line">remote: Counting objects: 3, done.</span><br><span class="line">remote: Compressing objects: 100% (2/2), done.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (3/3), done.</span><br><span class="line">From github.com:wuwhs/demo</span><br><span class="line">   f848dc7..d696375  develop    -&gt; origin/develop</span><br><span class="line">Updating f848dc7..d696375</span><br><span class="line">Fast-forward</span><br><span class="line"> demo.txt | 2 ++</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br></pre></td></tr></table></figure>
 <p>PS：直接偷懒<code>pull</code>可能会出现没有找到<code>tracking</code>的分支</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git pull</span><br><span class="line">There is no tracking information for the current branch.</span><br><span class="line">Please specify which branch you want to merge with.</span><br><span class="line">See git-pull(1) for details.</span><br><span class="line"></span><br><span class="line">git pull &lt;remote&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">If you wish to set tracking information for this branch you can do so with:</span><br><span class="line"></span><br><span class="line">git branch --set-upstream-to=origin/&lt;branch&gt; develop</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git pull</span><br><span class="line">There is no tracking information for the current branch.</span><br><span class="line">Please specify which branch you want to merge with.</span><br><span class="line">See git-pull(1) for details.</span><br><span class="line"></span><br><span class="line">git pull &lt;remote&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">If you wish to set tracking information for this branch you can do so with:</span><br><span class="line"></span><br><span class="line">git branch --set-upstream-to=origin/&lt;branch&gt; develop</span><br></pre></td></tr></table></figure>
 <p>这时候要手动添加一下对应分支依赖<code>git branch --set-upstream-to=origin/&lt;branch&gt; develop</code></p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git branch --set-upstream-to=origin/develop develop</span><br><span class="line">Branch develop set up to track remote branch develop from origin.</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git pull</span><br><span class="line">remote: Counting objects: 3, done.</span><br><span class="line">remote: Compressing objects: 100% (2/2), done.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (3/3), done.</span><br><span class="line">From github.com:wuwhs/demo</span><br><span class="line">   f848dc7..d696375  develop    -&gt; origin/develop</span><br><span class="line">Updating f848dc7..d696375</span><br><span class="line">Fast-forward</span><br><span class="line"> demo.txt | 2 ++</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git branch --set-upstream-to=origin/develop develop</span><br><span class="line">Branch develop set up to track remote branch develop from origin.</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git pull</span><br><span class="line">remote: Counting objects: 3, done.</span><br><span class="line">remote: Compressing objects: 100% (2/2), done.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (3/3), done.</span><br><span class="line">From github.com:wuwhs/demo</span><br><span class="line">   f848dc7..d696375  develop    -&gt; origin/develop</span><br><span class="line">Updating f848dc7..d696375</span><br><span class="line">Fast-forward</span><br><span class="line"> demo.txt | 2 ++</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br></pre></td></tr></table></figure>
 <ol start="6">
 <li>将本地分支提交到对应远程分支上，<code>git push origin develop:develop</code>，即：<code>git push origin &lt;远程主机&gt;&lt;本地分支名&gt;:&lt;远程分支名&gt;</code>，如果名称一样可以简写，也就是<code>git push origin develop</code></li>
 </ol>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git push origin develop:develop</span><br><span class="line">Counting objects: 9, done.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">Compressing objects: 100% (5/5), done.</span><br><span class="line">Writing objects: 100% (9/9), 759 bytes | 0 bytes/s, done.</span><br><span class="line">Total 9 (delta 1), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (1/1), done.</span><br><span class="line">To git@github.com:wuwhs/demo.git</span><br><span class="line">   d696375..3c00c0c  develop -&gt; develop</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git push origin develop:develop</span><br><span class="line">Counting objects: 9, done.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">Compressing objects: 100% (5/5), done.</span><br><span class="line">Writing objects: 100% (9/9), 759 bytes | 0 bytes/s, done.</span><br><span class="line">Total 9 (delta 1), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (1/1), done.</span><br><span class="line">To git@github.com:wuwhs/demo.git</span><br><span class="line">   d696375..3c00c0c  develop -&gt; develop</span><br></pre></td></tr></table></figure>
 <ol start="7">
 <li>项目测试 OK 了，本地分支合并到<code>master</code>分支上，要用到<code>git merge &lt;branch&gt;</code></li>
 </ol>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git checkout master</span><br><span class="line">Switched to branch 'master'</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git merge develop</span><br><span class="line">Updating c4d0377..3c00c0c</span><br><span class="line">Fast-forward</span><br><span class="line"> demo.txt | 9 +++++++++</span><br><span class="line"> 1 file changed, 9 insertions(+)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (develop)</span><br><span class="line">$ git checkout master</span><br><span class="line">Switched to branch &apos;master&apos;</span><br><span class="line"></span><br><span class="line">MINGW32 /d/appSoft/wampserver/wamp64/www/demo (master)</span><br><span class="line">$ git merge develop</span><br><span class="line">Updating c4d0377..3c00c0c</span><br><span class="line">Fast-forward</span><br><span class="line"> demo.txt | 9 +++++++++</span><br><span class="line"> 1 file changed, 9 insertions(+)</span><br></pre></td></tr></table></figure>
 <p>常用的操作就以上七步了，当然会有不同情形的应用。</p>
 <h3 id="7-附录：git-cheat-sheet"><a href="#7-附录：git-cheat-sheet" class="headerlink" title="7. 附录：git-cheat-sheet"></a>7. 附录：git-cheat-sheet</h3><p>一般而言，常用的就是以上那些命令，有人专门的整理了一份比较全一点的文档 git-cheat-sheet，方便查阅。</p>
 <h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>列出当前配置：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --list</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
 <p>列出 repository 配置：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --local --list</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --local --list</span><br></pre></td></tr></table></figure>
 <p>列出全局配置：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --list</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --list</span><br></pre></td></tr></table></figure>
 <p>列出系统配置：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --system --list</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --system --list</span><br></pre></td></tr></table></figure>
 <p>设置用户名：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name "[firstname lastname]"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;[firstname lastname]&quot;</span><br></pre></td></tr></table></figure>
 <p>设置用户邮箱：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.email "[valid-email]"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.email &quot;[valid-email]&quot;</span><br></pre></td></tr></table></figure>
 <p>设置 git 命令输出为彩色：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global color.ui auto</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global color.ui auto</span><br></pre></td></tr></table></figure>
 <p>设置 git 使用的文本编辑器设：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.editor vi</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.editor vi</span><br></pre></td></tr></table></figure>
 <h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>Repository 配置对应的配置文件路径[–local]：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;repo&gt;/.git/config</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;repo&gt;/.git/config</span><br></pre></td></tr></table></figure>
 <p>用户全局配置对应的配置文件路径[–global]：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.gitconfig</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.gitconfig</span><br></pre></td></tr></table></figure>
 <p>系统配置对应的配置文件路径[–local]：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/gitconfig</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/gitconfig</span><br></pre></td></tr></table></figure>
 <h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><p>复制一个已创建的仓库:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 通过 SSH</span><br><span class="line">$ git clone ssh://user@domain.com/repo.git</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#通过 HTTP</span><br><span class="line">$ git clone http://domain.com/user/repo.git</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 通过 SSH</span><br><span class="line">$ git clone ssh://user@domain.com/repo.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#通过 HTTP</span><br><span class="line">$ git clone http://domain.com/user/repo.git</span><br></pre></td></tr></table></figure>
 <p>创建一个新的本地仓库:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
 <h4 id="本地修改"><a href="#本地修改" class="headerlink" title="本地修改"></a>本地修改</h4><p>显示工作路径下已修改的文件：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
 <p>显示与上次提交版本文件的不同：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff</span><br></pre></td></tr></table></figure>
 <p>把当前所有修改添加到下次提交中：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
 <p>把对某个文件的修改添加到下次提交中：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add -p &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add -p &lt;file&gt;</span><br></pre></td></tr></table></figure>
 <p>提交本地的所有修改：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -a</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -a</span><br></pre></td></tr></table></figure>
 <p>提交之前已标记的变化：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit</span><br></pre></td></tr></table></figure>
 <p>附加消息提交：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m 'message here'</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &apos;message here&apos;</span><br></pre></td></tr></table></figure>
 <p>提交，并将提交时间设置为之前的某个日期:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --date="`date --date='n day ago'`" -am "Commit Message"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --date=&quot;`date --date=&apos;n day ago&apos;`&quot; -am &quot;Commit Message&quot;</span><br></pre></td></tr></table></figure>
 <p>修改上次提交<br>（请勿修改已发布的提交记录!）</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend</span><br></pre></td></tr></table></figure>
 <p>修改上次提交的 committer date：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_COMMITTER_DATE="date" git commit --amend</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_COMMITTER_DATE=&quot;date&quot; git commit --amend</span><br></pre></td></tr></table></figure>
 <p>修改上次提交的 author date：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend --date="date"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend --date=&quot;date&quot;</span><br></pre></td></tr></table></figure>
 <p>把当前分支中未提交的修改移动到其他分支：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git stash</span><br><span class="line">git checkout branch2</span><br><span class="line">git stash pop</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git stash</span><br><span class="line">git checkout branch2</span><br><span class="line">git stash pop</span><br></pre></td></tr></table></figure>
 <p>将 stashed changes 应用到当前分支：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash apply</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash apply</span><br></pre></td></tr></table></figure>
 <p>删除最新一次的 stashed changes：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash drop</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash drop</span><br></pre></td></tr></table></figure>
 <h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><p>从当前目录的所有文件中查找文本内容：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git grep "Hello"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git grep &quot;Hello&quot;</span><br></pre></td></tr></table></figure>
 <p>在某一版本中搜索文本：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git grep "Hello" v2.5</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git grep &quot;Hello&quot; v2.5</span><br></pre></td></tr></table></figure>
 <h4 id="提交历史"><a href="#提交历史" class="headerlink" title="提交历史"></a>提交历史</h4><p>从最新提交开始，显示所有的提交记录（显示 hash， 作者信息，提交的标题和时间）：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br></pre></td></tr></table></figure>
 <p>显示所有提交（仅显示提交的 hash 和 message）：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --oneline</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --oneline</span><br></pre></td></tr></table></figure>
 <p>显示某个用户的所有提交：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --author="username"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --author=&quot;username&quot;</span><br></pre></td></tr></table></figure>
 <p>显示某个文件的所有修改：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log -p &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log -p &lt;file&gt;</span><br></pre></td></tr></table></figure>
 <p>仅显示远端分支与远端分支提交记录的差集：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --oneline &lt;origin/master&gt;..&lt;remote/master&gt; --left-right</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --oneline &lt;origin/master&gt;..&lt;remote/master&gt; --left-right</span><br></pre></td></tr></table></figure>
 <p>谁，在什么时间，修改了文件的什么内容：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git blame &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git blame &lt;file&gt;</span><br></pre></td></tr></table></figure>
 <p>显示 reflog：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog show</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog show</span><br></pre></td></tr></table></figure>
 <p>删除 reflog：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog delete</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog delete</span><br></pre></td></tr></table></figure>
 <h4 id="分支与标签"><a href="#分支与标签" class="headerlink" title="分支与标签"></a>分支与标签</h4><p>列出所有的分支：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure>
 <p>列出所有的远端分支：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -r</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -r</span><br></pre></td></tr></table></figure>
 <p>切换分支：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout &lt;branch&gt;</span><br></pre></td></tr></table></figure>
 <p>创建并切换到新分支:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b &lt;branch&gt;</span><br></pre></td></tr></table></figure>
 <p>基于当前分支创建新分支：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch &lt;new-branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch &lt;new-branch&gt;</span><br></pre></td></tr></table></figure>
 <p>基于远程分支创建新的可追溯的分支：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch --track &lt;new-branch&gt; &lt;remote-branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch --track &lt;new-branch&gt; &lt;remote-branch&gt;</span><br></pre></td></tr></table></figure>
 <p>删除本地分支:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d &lt;branch&gt;</span><br></pre></td></tr></table></figure>
 <p>强制删除一个本地分支：<br>将会丢失未合并的修改！</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -D &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -D &lt;branch&gt;</span><br></pre></td></tr></table></figure>
 <p>给当前版本打标签：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git tag &lt;tag-name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git tag &lt;tag-name&gt;</span><br></pre></td></tr></table></figure>
 <p>给当前版本打标签并附加消息：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git tag -a &lt;tag-name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git tag -a &lt;tag-name&gt;</span><br></pre></td></tr></table></figure>
 <h4 id="更新与发布"><a href="#更新与发布" class="headerlink" title="更新与发布"></a>更新与发布</h4><p>列出当前配置的远程端：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br></pre></td></tr></table></figure>
 <p>显示远程端的信息：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote show &lt;remote&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote show &lt;remote&gt;</span><br></pre></td></tr></table></figure>
 <p>添加新的远程端：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add &lt;remote&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add &lt;remote&gt; &lt;url&gt;</span><br></pre></td></tr></table></figure>
 <p>下载远程端版本，但不合并到 HEAD 中：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch &lt;remote&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch &lt;remote&gt;</span><br></pre></td></tr></table></figure>
 <p>下载远程端版本，并自动与 HEAD 版本合并：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote pull &lt;remote&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote pull &lt;remote&gt; &lt;url&gt;</span><br></pre></td></tr></table></figure>
 <p>将远程端版本合并到本地版本中：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
 <p>以 rebase 方式将远端分支与本地合并：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase &lt;remote&gt; &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase &lt;remote&gt; &lt;branch&gt;</span><br></pre></td></tr></table></figure>
 <p>将本地版本发布到远程端：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push remote &lt;remote&gt; &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push remote &lt;remote&gt; &lt;branch&gt;</span><br></pre></td></tr></table></figure>
 <p>删除远程端分支：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push &lt;remote&gt; :&lt;branch&gt; (since Git v1.5.0)</span><br><span class="line"># or</span><br><span class="line">git push &lt;remote&gt; --delete &lt;branch&gt; (since Git v1.7.0)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push &lt;remote&gt; :&lt;branch&gt; (since Git v1.5.0)</span><br><span class="line"># or</span><br><span class="line">git push &lt;remote&gt; --delete &lt;branch&gt; (since Git v1.7.0)</span><br></pre></td></tr></table></figure>
 <p>发布标签:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push --tags</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push --tags</span><br></pre></td></tr></table></figure>
 <p>合并与重置(Rebase)<br>将分支合并到当前 HEAD 中：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge &lt;branch&gt;</span><br></pre></td></tr></table></figure>
 <p>将当前 HEAD 版本重置到分支中:<br>请勿重置已发布的提交!</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase &lt;branch&gt;</span><br></pre></td></tr></table></figure>
 <p>退出重置:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase --abort</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase --abort</span><br></pre></td></tr></table></figure>
 <p>解决冲突后继续重置：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase --continue</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase --continue</span><br></pre></td></tr></table></figure>
 <p>使用配置好的 merge tool 解决冲突：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git mergetool</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git mergetool</span><br></pre></td></tr></table></figure>
 <p>在编辑器中手动解决冲突后，标记文件为已解决冲突：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;resolved-file&gt;</span><br><span class="line">$ git rm &lt;resolved-file&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;resolved-file&gt;</span><br><span class="line">$ git rm &lt;resolved-file&gt;</span><br></pre></td></tr></table></figure>
 <p>合并提交：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase -i &lt;commit-just-before-first&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase -i &lt;commit-just-before-first&gt;</span><br></pre></td></tr></table></figure>
 <p>把上面的内容替换为下面的内容：</p>
 <p>原内容：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pick &lt;commit_id&gt;</span><br><span class="line">pick &lt;commit_id2&gt;</span><br><span class="line">pick &lt;commit_id3&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pick &lt;commit_id&gt;</span><br><span class="line">pick &lt;commit_id2&gt;</span><br><span class="line">pick &lt;commit_id3&gt;</span><br></pre></td></tr></table></figure>
 <p>替换为：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pick &lt;commit_id&gt;</span><br><span class="line">squash &lt;commit_id2&gt;</span><br><span class="line">squash &lt;commit_id3&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pick &lt;commit_id&gt;</span><br><span class="line">squash &lt;commit_id2&gt;</span><br><span class="line">squash &lt;commit_id3&gt;</span><br></pre></td></tr></table></figure>
 <h4 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h4><p>放弃工作目录下的所有修改：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD</span><br></pre></td></tr></table></figure>
 <p>移除缓存区的所有文件（i.e. 撤销上次 git add）:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD</span><br></pre></td></tr></table></figure>
 <p>放弃某个文件的所有本地修改：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout HEAD &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout HEAD &lt;file&gt;</span><br></pre></td></tr></table></figure>
 <p>重置一个提交（通过创建一个截然不同的新提交）</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git revert &lt;commit&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git revert &lt;commit&gt;</span><br></pre></td></tr></table></figure>
 <p>将 HEAD 重置到指定的版本，并抛弃该版本之后的所有修改：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard &lt;commit&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard &lt;commit&gt;</span><br></pre></td></tr></table></figure>
 <p>用远端分支强制覆盖本地分支：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard &lt;remote/branch&gt; e.g., upstream/master, origin/my-feature</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard &lt;remote/branch&gt; e.g., upstream/master, origin/my-feature</span><br></pre></td></tr></table></figure>
 <p>将 HEAD 重置到上一次提交的版本，并将之后的修改标记为未添加到缓存区的修改：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset &lt;commit&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset &lt;commit&gt;</span><br></pre></td></tr></table></figure>
 <p>将 HEAD 重置到上一次提交的版本，并保留未提交的本地修改：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --keep &lt;commit&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --keep &lt;commit&gt;</span><br></pre></td></tr></table></figure>
 <p>删除添加.gitignore 文件前错误提交的文件：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -r --cached .</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m "remove xyz file"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -r --cached .</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m &quot;remove xyz file&quot;</span><br></pre></td></tr></table></figure>
 <p>完~</p>
 <p>可参考文章：</p>
 <ol>
@@ -717,7 +723,7 @@ zh-Hans"><head>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -760,7 +766,7 @@ zh-Hans"><head>
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
     <script>
         yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
@@ -851,7 +857,7 @@ zh-Hans"><head>
     
       <div class="visit">
         
-          <span id="busuanzi_container_site_pv" style="display:none">
+          <span id="busuanzi_container_site_pv" style='display:none'>
             <span id="site-visit" title="本站到访数">
               <i class="fa fa-user" aria-hidden="true"></i>
               <span id="busuanzi_value_site_uv"></span>
@@ -862,7 +868,7 @@ zh-Hans"><head>
               <span>| </span>
               
                 
-                  <span id="busuanzi_container_page_pv" style="display:none">
+                  <span id="busuanzi_container_page_pv" style='display:none'>
                     <span id="page-visit" title="本页阅读量">
                       <i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i>
                       <span id="busuanzi_value_page_pv"></span>
@@ -962,10 +968,8 @@ MathJax.Hub.Queue(function() {
         })
     </script>
 
-<script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
     </div>
 
-  
-
-  <script type="text/javascript" src="/yelee/bundle.js"></script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+  <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

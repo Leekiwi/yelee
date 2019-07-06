@@ -1,5 +1,9 @@
-<!DOCTYPE html><html lang="
-zh-Hans"><head>
+<!DOCTYPE html>
+<html lang="
+zh-Hans"
+  >
+
+    <head>
       
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -7,10 +11,10 @@ zh-Hans"><head>
     <![endif]-->
 
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="author" content="Little ice">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="author" content="Little ice" />
         <link rel="icon" type="image/x-icon" href="/yelee/favicon.ico">
 
         
@@ -20,7 +24,7 @@ zh-Hans"><head>
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解BFC">
 <meta property="og:url" content="https://leekiwi.github.io/yelee/2018/05/21/深入理解BFC/index.html">
-<meta property="og:site_name" content="little ice's Blog">
+<meta property="og:site_name" content="little ice&#39;s Blog">
 <meta property="og:description" content="BFC 概念1、相关定义1.1 Formatting contextFormatting context 是 W3C CSS2.1 规定中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素如何定位，以及和其他元素的关系和相互作用。最常见的 Formatting context 有 Block formatting context（简称 BFC）和 Inline format">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://note.youdao.com/yws/public/resource/b9cdada69234d36736d09235b516171c/xmlnote/67CD3941EFC8420AAB3D54CB766DE219/7159">
@@ -38,7 +42,7 @@ zh-Hans"><head>
                       <link rel="apple-touch-icon" href="/yelee//apple-touch-icon.png">
 
                       
-                        <link rel="alternate" href="/atom.xml" title="little ice's Blog" type="application/atom+xml">
+                        <link rel="alternate" href="/atom.xml" title="little ice&#39;s Blog" type="application/atom+xml">
                         
 
                           
@@ -46,30 +50,31 @@ zh-Hans"><head>
                             
 
                               
-                                
+                                <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
                                 
 
                                   
-                                    
+                                    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
                                     
 
                                       
                                         <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-                                        
+                                        <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css"
+                                          rel="stylesheet">
                                         
 
-                                          
+                                          <link rel="stylesheet" href="/yelee/css/style.css">
 
                                             
 
-                                                
+                                                <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
                                                 
                                                   <title>
                                                     
                                                       深入理解BFC |
                                                         
-                                                          little ice's Blog
+                                                          little ice&#39;s Blog
                                                   </title>
 
                                                   <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
@@ -106,7 +111,7 @@ zh-Hans"><head>
 
                                                                   
 
-    <script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/yelee/style.css');loadCss('//cdn.bootcss.com/animate.css/3.5.1/animate.min.css');loadCss('//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css');loadCss('//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css');loadCss('//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');</script><noscript><link rel="stylesheet" href="/yelee/style.css"><link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css"><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></noscript></head>
+    </head>
 
   <body>
     <div id="container">
@@ -133,12 +138,13 @@ zh-Hans"><head>
 
         
           <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off"
+              autocorrect="off" searchonload="true" />
             <i class="fa fa-times" onclick="resetSearch()"></i>
           </form>
           <div id="local-search-result"></div>
-          <p class="no-result">No results found
-            <i class="fa fa-spinner fa-pulse"></i>
+          <p class='no-result'>No results found
+            <i class='fa fa-spinner fa-pulse'></i>
           </p>
           
 
@@ -341,10 +347,10 @@ zh-Hans"><head>
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
           <div class="body-wrap">
-            <article id="post-深入理解BFC" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <article id="post-深入理解BFC" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/yelee/2018/05/21/深入理解BFC/" class="article-date">
@@ -356,7 +362,7 @@ zh-Hans"><head>
     
       <div class="article-inner">
         
-          <input type="hidden" class="isFancy">
+          <input type="hidden" class="isFancy" />
           
             
               <header class="article-header">
@@ -428,23 +434,23 @@ zh-Hans"><head>
 <li>display 为 inline-block， table-cell，table-caption，flex， inline-flex；</li>
 <li>overflow 不为 visible；</li>
 </ul>
-<h3 id="2-2-场景一：对于两栏或三栏浮动自适应布局，包含块边接触问题。"><a href="#2-2-场景一：对于两栏或三栏浮动自适应布局，包含块边接触问题。" class="headerlink" title="2.2 场景一：对于两栏或三栏浮动自适应布局，包含块边接触问题。"></a>2.2 场景一：对于两栏或三栏浮动自适应布局，包含块边接触问题。</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .left-center-right.float .left {</span><br><span class="line">        float: left;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        background-color: rgba(0, 0, 0, 0.7);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    .left-center-right.float .center {</span><br><span class="line">        background-color: rgb(13, 218, 233);</span><br><span class="line">        height: 200px;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    .left-center-right.float .right {</span><br><span class="line">        float: right;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 150px;</span><br><span class="line">        background-color: rgb(189, 109, 109);</span><br><span class="line">    }</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;section class="left-center-right float"&gt;</span><br><span class="line">    &lt;article class="left"&gt;我是左边区域块&lt;/article&gt;</span><br><span class="line">    &lt;article class="right"&gt;我是右边区域块&lt;/article&gt;</span><br><span class="line">    &lt;article class="center"&gt;我是中间区域块&lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="2-2-场景一：对于两栏或三栏浮动自适应布局，包含块边接触问题。"><a href="#2-2-场景一：对于两栏或三栏浮动自适应布局，包含块边接触问题。" class="headerlink" title="2.2 场景一：对于两栏或三栏浮动自适应布局，包含块边接触问题。"></a>2.2 场景一：对于两栏或三栏浮动自适应布局，包含块边接触问题。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .left-center-right.float .left &#123;</span><br><span class="line">        float: left;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        background-color: rgba(0, 0, 0, 0.7);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .left-center-right.float .center &#123;</span><br><span class="line">        background-color: rgb(13, 218, 233);</span><br><span class="line">        height: 200px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .left-center-right.float .right &#123;</span><br><span class="line">        float: right;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 150px;</span><br><span class="line">        background-color: rgb(189, 109, 109);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;section class=&quot;left-center-right float&quot;&gt;</span><br><span class="line">    &lt;article class=&quot;left&quot;&gt;我是左边区域块&lt;/article&gt;</span><br><span class="line">    &lt;article class=&quot;right&quot;&gt;我是右边区域块&lt;/article&gt;</span><br><span class="line">    &lt;article class=&quot;center&quot;&gt;我是中间区域块&lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
 <p>中间自适应栏边界会延展左右浮动区域<br><img src="https://note.youdao.com/yws/public/resource/b9cdada69234d36736d09235b516171c/xmlnote/67CD3941EFC8420AAB3D54CB766DE219/7159" alt="image"></p>
 <p>此时需要把中间栏变成 BFC</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.left-center-right.float .center {</span><br><span class="line">    background-color: rgb(13, 218, 233);</span><br><span class="line">    height: 200px;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.left-center-right.float .center &#123;</span><br><span class="line">    background-color: rgb(13, 218, 233);</span><br><span class="line">    height: 200px;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="https://note.youdao.com/yws/public/resource/b9cdada69234d36736d09235b516171c/xmlnote/97EE88BCB7AC428E95F9F9A5580639A7/7175" alt="image"></p>
-<h3 id="2-3-场景二：子级元素有浮动，父级元素塌陷问题"><a href="#2-3-场景二：子级元素有浮动，父级元素塌陷问题" class="headerlink" title="2.3 场景二：子级元素有浮动，父级元素塌陷问题"></a>2.3 场景二：子级元素有浮动，父级元素塌陷问题</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .all-children-float .left {</span><br><span class="line">        float: left;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        background-color: rgba(0, 0, 0, 0.7);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    .all-children-float .right {</span><br><span class="line">        float: right;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 150px;</span><br><span class="line">        background-color: rgb(189, 109, 109);</span><br><span class="line">    }</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;section class="all-children-float"&gt;</span><br><span class="line">    &lt;article class="left"&gt;我是左边区域块&lt;/article&gt;</span><br><span class="line">    &lt;article class="right"&gt;我是右边区域块&lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="2-3-场景二：子级元素有浮动，父级元素塌陷问题"><a href="#2-3-场景二：子级元素有浮动，父级元素塌陷问题" class="headerlink" title="2.3 场景二：子级元素有浮动，父级元素塌陷问题"></a>2.3 场景二：子级元素有浮动，父级元素塌陷问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .all-children-float .left &#123;</span><br><span class="line">        float: left;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        background-color: rgba(0, 0, 0, 0.7);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .all-children-float .right &#123;</span><br><span class="line">        float: right;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 150px;</span><br><span class="line">        background-color: rgb(189, 109, 109);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;section class=&quot;all-children-float&quot;&gt;</span><br><span class="line">    &lt;article class=&quot;left&quot;&gt;我是左边区域块&lt;/article&gt;</span><br><span class="line">    &lt;article class=&quot;right&quot;&gt;我是右边区域块&lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
 <p><img src="https://note.youdao.com/yws/public/resource/b9cdada69234d36736d09235b516171c/xmlnote/1B737A83C8D04BF9B0ABDE2EF28DF0E6/7190" alt="image"></p>
 <p>此时需要将父级元素变成 BFC</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.all-children-float {</span><br><span class="line">    position: absolute;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.all-children-float &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="https://note.youdao.com/yws/public/resource/b9cdada69234d36736d09235b516171c/xmlnote/D00321F3DC9C4D578E6C89DD23DB0AB2/7200" alt="image"></p>
-<h3 id="2-3-场景三：垂直方向-margin-出现重合"><a href="#2-3-场景三：垂直方向-margin-出现重合" class="headerlink" title="2.3 场景三：垂直方向 margin 出现重合"></a>2.3 场景三：垂直方向 margin 出现重合</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .verticle-block .block1 {</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 150px;</span><br><span class="line">        background-color: rgb(13, 218, 233);</span><br><span class="line">        margin: 20px;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    .verticle-block .block2 {</span><br><span class="line">        width: 150px;</span><br><span class="line">        height: 150px;</span><br><span class="line">        background-color: rgb(189, 109, 109);</span><br><span class="line">        margin: 30px;</span><br><span class="line">    }</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;section class="verticle-block"&gt;</span><br><span class="line">    &lt;article class="block1"&gt;我是区域块1&lt;/article&gt;</span><br><span class="line">    &lt;article class="block2"&gt;我是区域块2&lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="2-3-场景三：垂直方向-margin-出现重合"><a href="#2-3-场景三：垂直方向-margin-出现重合" class="headerlink" title="2.3 场景三：垂直方向 margin 出现重合"></a>2.3 场景三：垂直方向 margin 出现重合</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .verticle-block .block1 &#123;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 150px;</span><br><span class="line">        background-color: rgb(13, 218, 233);</span><br><span class="line">        margin: 20px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .verticle-block .block2 &#123;</span><br><span class="line">        width: 150px;</span><br><span class="line">        height: 150px;</span><br><span class="line">        background-color: rgb(189, 109, 109);</span><br><span class="line">        margin: 30px;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;section class=&quot;verticle-block&quot;&gt;</span><br><span class="line">    &lt;article class=&quot;block1&quot;&gt;我是区域块1&lt;/article&gt;</span><br><span class="line">    &lt;article class=&quot;block2&quot;&gt;我是区域块2&lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>Box 垂直方向的距离 margin 决定，属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠。</p>
 </blockquote>
 <p><img src="https://note.youdao.com/yws/public/resource/b9cdada69234d36736d09235b516171c/xmlnote/4C9FBEC4951F4006939CD8AAEC698B21/7214" alt="image"></p>
 <p>我们的做法是包一层标签，并转化成 BFC。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.wrapper1 {</span><br><span class="line">    overflow: hidden;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">&lt;section class="verticle-block"&gt;</span><br><span class="line">    &lt;div class="wrapper1"&gt;</span><br><span class="line">        &lt;article class="block1"&gt;我是区域块1&lt;/article&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;article class="block2"&gt;我是区域块2&lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.wrapper1 &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;section class=&quot;verticle-block&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;wrapper1&quot;&gt;</span><br><span class="line">        &lt;article class=&quot;block1&quot;&gt;我是区域块1&lt;/article&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;article class=&quot;block2&quot;&gt;我是区域块2&lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
 <p><img src="https://note.youdao.com/yws/public/resource/b9cdada69234d36736d09235b516171c/xmlnote/56A0200CB1424C20AB9930AA4CAC44E2/7217" alt="image"></p>
 
                                             
@@ -464,7 +470,7 @@ zh-Hans"><head>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -507,7 +513,7 @@ zh-Hans"><head>
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
     <script>
         yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
@@ -598,7 +604,7 @@ zh-Hans"><head>
     
       <div class="visit">
         
-          <span id="busuanzi_container_site_pv" style="display:none">
+          <span id="busuanzi_container_site_pv" style='display:none'>
             <span id="site-visit" title="本站到访数">
               <i class="fa fa-user" aria-hidden="true"></i>
               <span id="busuanzi_value_site_uv"></span>
@@ -609,7 +615,7 @@ zh-Hans"><head>
               <span>| </span>
               
                 
-                  <span id="busuanzi_container_page_pv" style="display:none">
+                  <span id="busuanzi_container_page_pv" style='display:none'>
                     <span id="page-visit" title="本页阅读量">
                       <i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i>
                       <span id="busuanzi_value_page_pv"></span>
@@ -709,10 +715,8 @@ MathJax.Hub.Queue(function() {
         })
     </script>
 
-<script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
     </div>
 
-  
-
-  <script type="text/javascript" src="/yelee/bundle.js"></script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+  <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

@@ -1,5 +1,9 @@
-<!DOCTYPE html><html lang="
-zh-Hans"><head>
+<!DOCTYPE html>
+<html lang="
+zh-Hans"
+  >
+
+    <head>
       
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -7,10 +11,10 @@ zh-Hans"><head>
     <![endif]-->
 
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="author" content="Little ice">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="author" content="Little ice" />
         <link rel="icon" type="image/x-icon" href="/yelee/favicon.ico">
 
         
@@ -20,7 +24,7 @@ zh-Hans"><head>
 <meta property="og:type" content="article">
 <meta property="og:title" content="理解同步、异步和事件循环">
 <meta property="og:url" content="https://leekiwi.github.io/yelee/2018/08/20/理解同步、异步和事件循环/index.html">
-<meta property="og:site_name" content="little ice's Blog">
+<meta property="og:site_name" content="little ice&#39;s Blog">
 <meta property="og:description" content="JavaScript 运行机制 所有同步任务都在主线程上执行，形成一个执行栈；">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-09-10T09:46:25.551Z">
@@ -31,7 +35,7 @@ zh-Hans"><head>
                       <link rel="apple-touch-icon" href="/yelee//apple-touch-icon.png">
 
                       
-                        <link rel="alternate" href="/atom.xml" title="little ice's Blog" type="application/atom+xml">
+                        <link rel="alternate" href="/atom.xml" title="little ice&#39;s Blog" type="application/atom+xml">
                         
 
                           
@@ -39,30 +43,31 @@ zh-Hans"><head>
                             
 
                               
-                                
+                                <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
                                 
 
                                   
-                                    
+                                    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
                                     
 
                                       
                                         <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-                                        
+                                        <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css"
+                                          rel="stylesheet">
                                         
 
-                                          
+                                          <link rel="stylesheet" href="/yelee/css/style.css">
 
                                             
 
-                                                
+                                                <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
                                                 
                                                   <title>
                                                     
                                                       理解同步、异步和事件循环 |
                                                         
-                                                          little ice's Blog
+                                                          little ice&#39;s Blog
                                                   </title>
 
                                                   <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
@@ -99,7 +104,7 @@ zh-Hans"><head>
 
                                                                   
 
-    <script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/yelee/style.css');loadCss('//cdn.bootcss.com/animate.css/3.5.1/animate.min.css');loadCss('//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css');loadCss('//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css');loadCss('//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');</script><noscript><link rel="stylesheet" href="/yelee/style.css"><link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css"><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></noscript></head>
+    </head>
 
   <body>
     <div id="container">
@@ -126,12 +131,13 @@ zh-Hans"><head>
 
         
           <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off"
+              autocorrect="off" searchonload="true" />
             <i class="fa fa-times" onclick="resetSearch()"></i>
           </form>
           <div id="local-search-result"></div>
-          <p class="no-result">No results found
-            <i class="fa fa-spinner fa-pulse"></i>
+          <p class='no-result'>No results found
+            <i class='fa fa-spinner fa-pulse'></i>
           </p>
           
 
@@ -334,10 +340,10 @@ zh-Hans"><head>
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
           <div class="body-wrap">
-            <article id="post-理解同步、异步和事件循环" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <article id="post-理解同步、异步和事件循环" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/yelee/2018/08/20/理解同步、异步和事件循环/" class="article-date">
@@ -349,7 +355,7 @@ zh-Hans"><head>
     
       <div class="article-inner">
         
-          <input type="hidden" class="isFancy">
+          <input type="hidden" class="isFancy" />
           
             
               <header class="article-header">
@@ -419,9 +425,9 @@ zh-Hans"><head>
 </ol>
 <h4 id="1、单线程"><a href="#1、单线程" class="headerlink" title="1、单线程"></a>1、单线程</h4><p>JS 引擎在解释和执行 JavaScript 代码线程只有一个，叫做<strong>主线程</strong>。<br>但实际还存在其他线程，如：处理 Ajax 请求线程，处理 DOM 事件线程，定时器线程，和文件读写线程等，叫做<strong>工作线程</strong>。</p>
 <h4 id="2、同步和异步"><a href="#2、同步和异步" class="headerlink" title="2、同步和异步"></a>2、同步和异步</h4><p>同步：如果函数返回的时候，调用者就能够得到预期结果。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.sqrt(2);</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.sqrt(2);</span><br></pre></td></tr></table></figure>
 <p>异步：函数返回的时候，调用者还不能够得到预期结果，而是需要通过一定手段得到。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile("foo.txt", "utf8", function(err, data){</span><br><span class="line">    console.log(data)</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(&quot;foo.txt&quot;, &quot;utf8&quot;, function(err, data)&#123;</span><br><span class="line">    console.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>上面代码中，我们希望 fs.readFile 函数读取文件，并打印出来，但是在 fs.readFile 函数返回时，我们期望的结果并不会发生，而是要等文件全部读取完成之后。</p>
 <h5 id="异步-AJAX："><a href="#异步-AJAX：" class="headerlink" title="异步 AJAX："></a>异步 AJAX：</h5><blockquote>
 <p>主线程：“你好，AJAX 线程。请你帮我发个 HTTP 请求吧，我把请求地址和参数都给你了。”</p>
@@ -468,7 +474,7 @@ zh-Hans"><head>
 <p>主线程发起一个异步请求，相应的工作线程接收线程请求并告知主线程已收到；主线程可以继续执行后面的代码，同时工作线程执行异步任务；工作线程完成工作后，通知主线程；主线程收到通知后，执行一定动作（调用回调函数）。</p>
 </blockquote>
 <p>异步函数通常具有一下形式：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A(arg..., callbackFn)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A(arg..., callbackFn)</span><br></pre></td></tr></table></figure>
 <p>他可以叫做异步过程的<strong>发起函数</strong>，或者叫做异步任务<strong>注册函数</strong>。</p>
 <p>从主线程的角度看，一个一度过程包括两个要素：</p>
 <ul>
@@ -488,9 +494,9 @@ zh-Hans"><head>
 <p>消息就是注册异步任务时添加的回调函数。</p>
 </blockquote>
 <p>以异步 Ajax 为例</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.ajax('http://segmentfault.com', function(resp) {</span><br><span class="line">    console.log('我是响应：', resp);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&apos;http://segmentfault.com&apos;, function(resp) &#123;</span><br><span class="line">    console.log(&apos;我是响应：&apos;, resp);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>主线程发起 Ajax 请求后，会继续执行其他代码。Ajax 线程负责请求 segmentfault.com，拿到响应后，它会把响应封装成一个 JavaScript 对象，然后构成一条消息：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var message = function() {</span><br><span class="line">    callbackFn();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var message = function() &#123;</span><br><span class="line">    callbackFn();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>其中 callbackFn 就是前面代码中成功响应时的回调函数。</p>
 <p>主线程在执行完当前循环中所有代码后，就会到消息队列取出这条消息（也就是 message 函数），并执行它，到此为止，就完成了工作线程对主线程的通知，回调函数也就得到了执行。如果一开始主线程就没有提供回调函数，Ajax 线程在收到 HTTP 响应后，也就没有必要通知主线程，从而没必要往消息队列放消息。</p>
 <blockquote>
@@ -500,12 +506,12 @@ zh-Hans"><head>
 <p>消息队列中的每条消息实际上都对应着一个事件</p>
 </blockquote>
 <p>有一类很重要的异步过程：DOM 事件</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var button = document.getElement('#btn');</span><br><span class="line">button.addEventListener('click', function(e) {</span><br><span class="line">    console.log();</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var button = document.getElement(&apos;#btn&apos;);</span><br><span class="line">button.addEventListener(&apos;click&apos;, function(e) &#123;</span><br><span class="line">    console.log();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>从事件的角度来看，上述代码表示：在按钮上添加了一个鼠标单击事件的事件监听器；当用户点击按钮时，鼠标单击事件触发，事件监听器函数被调用。</p>
 <p>从异步过程的角度看，addEventListener 函数就是异步过程的发起函数，事件监听器函数就是异步过程的回调函数。事件触发时，表示异步任务完成，会将事件监听器函数封装成一条消息放到消息队列中，等待主线程执行。</p>
 <p>事件的概念实际上并不是必须的，事件机制实际上就是异步过程的通知机制。我觉得它的存在是为了编程接口对开发者更友好。</p>
 <p>另一方面，所有的异步过程也都可以用事件来描述。例如：setTimeout 可以看成对应一个时间到了！的事件。前文的 setTimeout(fn, 1000);可以看成：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timer.addEventListener('timeout', 1000, fn);</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timer.addEventListener(&apos;timeout&apos;, 1000, fn);</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>工作线程是生产者，主线程是消费者(只有一个消费者)。工作线程执行异步任务，执行完成后把对应的回调函数封装成一条消息放到消息队列中；主线程不断地从消息队列中取消息并执行，当消息队列空时主线程阻塞，直到消息队列再次非空。</p>
 </blockquote>
@@ -534,7 +540,7 @@ zh-Hans"><head>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -563,7 +569,7 @@ zh-Hans"><head>
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-运行机制"><span class="toc-number">1.</span> <span class="toc-text">JavaScript 运行机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、单线程"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、单线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、同步和异步"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、同步和异步</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#异步-AJAX："><span class="toc-number">1.0.2.1.</span> <span class="toc-text">异步 AJAX：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#同步-AJAX："><span class="toc-number">1.0.2.2.</span> <span class="toc-text">同步 AJAX：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、异步过程"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、异步过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、消息队列和事件循环"><span class="toc-number">1.0.4.</span> <span class="toc-text">4、消息队列和事件循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、异步与事件"><span class="toc-number">1.0.5.</span> <span class="toc-text">5、异步与事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、macrotasks-与-microtasks-的区别"><span class="toc-number">1.0.6.</span> <span class="toc-text">6、macrotasks 与 microtasks 的区别</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-运行机制"><span class="toc-number">1.</span> <span class="toc-text">JavaScript 运行机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、单线程"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、单线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、同步和异步"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、同步和异步</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#异步-AJAX："><span class="toc-number">1.0.2.1.</span> <span class="toc-text">异步 AJAX：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#同步-AJAX："><span class="toc-number">1.0.2.2.</span> <span class="toc-text">同步 AJAX：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、异步过程"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、异步过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、消息队列和事件循环"><span class="toc-number">1.0.4.</span> <span class="toc-text">4、消息队列和事件循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、异步与事件"><span class="toc-number">1.0.5.</span> <span class="toc-text">5、异步与事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、macrotasks-与-microtasks-的区别"><span class="toc-number">1.0.6.</span> <span class="toc-text">6、macrotasks 与 microtasks 的区别</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -577,7 +583,7 @@ zh-Hans"><head>
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
     <script>
         yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
@@ -668,7 +674,7 @@ zh-Hans"><head>
     
       <div class="visit">
         
-          <span id="busuanzi_container_site_pv" style="display:none">
+          <span id="busuanzi_container_site_pv" style='display:none'>
             <span id="site-visit" title="本站到访数">
               <i class="fa fa-user" aria-hidden="true"></i>
               <span id="busuanzi_value_site_uv"></span>
@@ -679,7 +685,7 @@ zh-Hans"><head>
               <span>| </span>
               
                 
-                  <span id="busuanzi_container_page_pv" style="display:none">
+                  <span id="busuanzi_container_page_pv" style='display:none'>
                     <span id="page-visit" title="本页阅读量">
                       <i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i>
                       <span id="busuanzi_value_page_pv"></span>
@@ -779,10 +785,8 @@ MathJax.Hub.Queue(function() {
         })
     </script>
 
-<script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
     </div>
 
-  
-
-  <script type="text/javascript" src="/yelee/bundle.js"></script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+  <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
