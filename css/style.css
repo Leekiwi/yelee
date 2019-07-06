@@ -891,7 +891,7 @@ a {
   background-size: 75%;
 }
 #header .header-nav .social .GitHub {
-  background: url("img/github.png") no-repeat #fff;
+  background: url("//img/github.png") no-repeat #fff;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%;
