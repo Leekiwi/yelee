@@ -884,11 +884,18 @@ a {
   -moz-background-size: 103%;
   background-size: 103%;
 }
-#header .header-nav .social .GitHub {
-  background: url("/yelee//img/GitHub.png") center no-repeat #000;
+#header .header-nav .social .github {
+  background: url("/yelee//img/github.png") center no-repeat #000;
   -webkit-background-size: 75%;
   -moz-background-size: 75%;
   background-size: 75%;
+}
+#header .header-nav .social .GitHub {
+  background: url("/yelee/img/github.png") no-repeat #fff;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  background-position: 100% 80%;
 }
 #header .header-nav .social .CodePen {
   background: url("//cdn.bootcss.com/logos/0.2.0/codepen-icon.svg") no-repeat #000;
